@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  src: url("./fonts/HelveticaNeue-Thin.otf") format("truetype");
+  font-family: "HelveticaNeue";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100;
+}
+@font-face {
+  src: url("./fonts/HelveticaNeue-Light.otf") format("truetype");
+  font-family: "HelveticaNeue";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+}
+@font-face {
+  src: url("./fonts/HelveticaNeue-Roman.otf") format("truetype");
+  font-family: "HelveticaNeue";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+}
+@font-face {
+  src: url("./fonts/HelveticaNeue-Medium.otf") format("truetype");
+  font-family: "HelveticaNeue";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+}
+@font-face {
+  src: url("./fonts/HelveticaNeue-Bold.otf") format("truetype");
+  font-family: "HelveticaNeue";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+}
+
+.transition-max-height {
+  transition-property: max-height;
+}
+
+:root {
+  --bold: #2b3f5a !important;
+  --black: #2b3f5a !important;
+  --brown: #6e7892 !important;
+  --blue: #235dff !important;
+  --yellow: #ffe984 !important;
+  --light-brown: #f9f6f3 !important;
+  --brown-light: rgba(110, 120, 146, 0.5) !important;
+  --white: #ffffff !important;
+  --red: #ff5749 !important;
+  --green: #46cb5c !important;
+  --toastify-color-info: #5254f1;
+  --toastify-color-success: #46cb5c;
+  --toastify-color-warning: #f1c40f;
+  --toastify-color-error: #ff5749;
+}
+* {
+  box-sizing: border-box;
+  user-select: text;
+  font-family: "HelveticaNeue", sans-serif !important;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: #f5f6f9 !important;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0;
+}
+
+body,
+button,
+select,
+input,
+textarea {
+  font-family: "HelveticaNeue", sans-serif !important;
+}
+::selection {
+  background: var(--yellow);
+  color: var(--black);
+}
+::-webkit-scrollbar {
+  width: 7px;
+  height: 0;
+}
+::-webkit-scrollbar-track {
+  background: var(--white);
+}
+::-webkit-scrollbar-thumb {
+  background: #757679;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+a {
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none !important;
+  padding: 0;
+}
+input {
+  outline: none !important;
+  box-shadow: none !important;
+  font-family: "Onest", sans-serif;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  appearance: textfield;
+}
+input[type="date"] {
+  cursor: text !important;
+}
+textarea {
+  resize: none !important;
+}
+button {
+  outline: none !important;
+  box-shadow: none !important;
+  cursor: pointer;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#menu-modal.show {
+  display: block;
+}
+
+/* Modal Background */
+#menu-modal {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Modal Background when shown */
+#menu-modal.show {
+  opacity: 1;
+}
+
+/* Menu Content */
+#menu-content {
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+#menu-modal.show #menu-content {
+  transform: translateX(0);
+}
+
+.Cell:hover .SlideText {
+  transform: translateY(10);
+  opacity: 1;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
