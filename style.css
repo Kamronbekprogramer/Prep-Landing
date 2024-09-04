@@ -148,18 +148,15 @@ button {
   display: block;
 }
 
-/* Modal Background */
 #menu-modal {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
 
-/* Modal Background when shown */
 #menu-modal.show {
   opacity: 1;
 }
 
-/* Menu Content */
 #menu-content {
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
