@@ -64,7 +64,7 @@ const slider = new Swiper(".swiper", {
 
   breakpoints: {
     640: {
-      slidesPerView: 2,
+      slidesPerView: 1,
     },
     1024: {
       slidesPerView: 3,
@@ -82,5 +82,4 @@ const slider = new Swiper(".swiper", {
   mousewheel: {
     forceToAxis: true,
   },
-  
 });
