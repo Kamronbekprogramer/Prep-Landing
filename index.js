@@ -22,20 +22,65 @@ backButton.addEventListener("click", () => {
   scrollContainer.scrollBy({ left: -260, behavior: "smooth" });
 });
 
-
-
-document.getElementById('backButton').addEventListener('click', function() {
-  let container = document.getElementById('scrollContainer');
+document.getElementById("backButton").addEventListener("click", function () {
+  let container = document.getElementById("scrollContainer");
   container.scrollBy({
     left: -container.clientWidth,
-    behavior: 'smooth'
+    behavior: "smooth",
   });
 });
 
-document.getElementById('nextButton').addEventListener('click', function() {
-  let container = document.getElementById('scrollContainer');
+document.getElementById("nextButton").addEventListener("click", function () {
+  let container = document.getElementById("scrollContainer");
   container.scrollBy({
     left: container.clientWidth,
-    behavior: 'smooth'
+    behavior: "smooth",
   });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  Inputmask({
+    mask: "+\\9\\9\\8 99 999-99-99",
+    placeholder: "_",
+    showMaskOnHover: false,
+  }).mask(document.getElementById("phone"));
+});
+
+const slider = new Swiper(".swiper", {
+  // direction: "gorizontal",
+  loop: true,
+  speed: 500,
+
+  // If we need pagination
+  pagination: {
+    // el: ".swiper-pagination",
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+  slidesPerView: 3,
+  grid: {
+    col: 3,
+  },
+  mousewheel: {
+    forceToAxis: true,
+  },
+  
 });
