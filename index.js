@@ -47,16 +47,12 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const slider = new Swiper(".swiper", {
-  // direction: "gorizontal",
   loop: true,
   speed: 500,
 
-  // If we need pagination
   pagination: {
-    // el: ".swiper-pagination",
   },
 
-  // Navigation arrows
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -71,7 +67,6 @@ const slider = new Swiper(".swiper", {
     },
   },
 
-  // And if we need scrollbar
   scrollbar: {
     el: ".swiper-scrollbar",
   },
