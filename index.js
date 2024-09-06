@@ -50,8 +50,7 @@ const slider = new Swiper(".swiper", {
   loop: true,
   speed: 500,
 
-  pagination: {
-  },
+  pagination: {},
 
   navigation: {
     nextEl: ".swiper-button-next",
@@ -78,3 +77,28 @@ const slider = new Swiper(".swiper", {
     forceToAxis: true,
   },
 });
+function startCountdown() {
+  let timeLeft = 180;
+
+  const countdownElement = document.getElementById("countdown");
+
+  const countdownTimer = setInterval(() => {
+    const minutes = Math.floor(timeLeft / 60);
+    const seconds = timeLeft % 60;
+
+    const formattedSeconds = seconds < 10 ? `0${seconds}` : seconds;
+
+    countdownElement.textContent = `${minutes}:${formattedSeconds}`;
+
+    if (timeLeft <= 0) {
+      timeLeft = 180; 
+    }
+
+    timeLeft--;
+  }, 1000);
+}
+
+startCountdown();
+
+
+
