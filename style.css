@@ -188,16 +188,44 @@ button {
 }
 
 .inner-shadow {
-  @apply shadow-inner; 
-  box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.2); 
+  @apply shadow-inner;
+  box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-
-.carusell_main {
-  overflow: hidden;
-  padding: 0 1rem;
-  }
-
 .owl-carousel .owl-item {
-  padding: 0 15px; 
+  display: flex;
+  justify-content: center; 
+  padding: 0 15px;
+}
+
+.item {
+  width: 100%; 
+  max-width: 590px; 
+}
+
+.owl-stage {
+  display: flex;
+  align-items: center;
+}
+.relative.w-15.h-6 {
+  position: relative;
+  overflow: hidden;
+}
+
+#progressBar {
+  height: 100%;
+  width: 30px !important;
+  background-color: #48bb78;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 9999px;
+}
+
+.slider {
+  margin-left: -713px;
+}
+
+#slider .last-card {
+  margin-right: 0; 
 }

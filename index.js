@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const slider = new Swiper(".swiper", {
   loop: true,
   speed: 500,
+  
 
   pagination: {},
 

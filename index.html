@@ -24,1235 +24,1351 @@
     />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </head>
-  <body class="bg-gray-100">
-    <div class="lg:px-[120px] md:px-[80px] sm:px-[40px] px-1">
-      <header
-        class="py-6 xl:px-[118px] lg:px-[38px] md:px-[30px] px-0 fixed top-0 left-0 w-full z-10"
-      >
-        <div
-          class="container mx-auto flex justify-between backdrop-blur-xl items-center py-4 px-4 lg:px-8 rounded-full border-2 border-white"
+  <body>
+    <div class="bg-gray-100">
+      <div class="lg:px-[120px] md:px-[80px] sm:px-[40px] px-1">
+        <header
+          class="py-6 xl:px-[118px] lg:px-[38px] md:px-[30px] px-0 fixed top-0 left-0 w-full z-10"
         >
           <div
-            class="flex items-center w-[91px] h-6 lg:w-[149px] md:h-10 z-20 space-x-2"
+            class="container mx-auto flex justify-between bg-gray-50 backdrop-blur-xl items-center py-4 px-4 lg:px-8 rounded-full border-2 border-white"
           >
-            <a href="#">
-              <img src="./images/LOGOTYPE.svg" alt="Logo" />
-            </a>
-          </div>
-
-          <nav class="hidden lg:flex">
-            <ul
-              class="flex space-x-8 md:text-sm lg:text-base md:gap-[10px] lg:gap-[10px] xl:gap-[30px] font-medium text-black"
+            <div
+              class="flex items-center w-[91px] h-6 lg:w-[149px] md:h-10 z-20 space-x-2"
             >
-              <li
-                class="hover:text-green-600 hover:ease-in-out hover:scale-105"
-              >
-                <a href="#">Kimlar uchun</a>
-              </li>
-              <li
-                class="hover:text-green-600 hover:ease-in-out hover:scale-105"
-              >
-                <a href="#">Sizni nimalar kutmoqda</a>
-              </li>
-              <li
-                class="hover:text-green-600 hover:ease-in-out hover:scale-105"
-              >
-                <a href="#">Natijalar</a>
-              </li>
-              <li
-                class="hover:text-green-600 hover:ease-in-out hover:scale-105"
-              >
-                <a href="#">O'quvchilarimiz bizdan mamnun</a>
-              </li>
-            </ul>
-          </nav>
+              <a href="#">
+                <img src="./images/LOGOTYPE.svg" alt="Logo" />
+              </a>
+            </div>
 
-          <div
-            class="RightIcon cursor-pointer lg:hidden h-10 p-2.5 bg-[#39cc46] rounded-[100px] justify-center items-center gap-2.5 inline-flex"
-            id="menu-button"
-          >
-            <div class="MenuIcon w-5 h-5 relative">
-              <img src="./images/menu - icon.svg" alt="" />
+            <nav class="hidden lg:flex">
+              <ul
+                class="flex space-x-8 md:text-sm lg:text-base md:gap-[10px] lg:gap-[10px] xl:gap-[30px] font-medium text-black"
+              >
+                <li
+                  class="hover:text-green-600 hover:ease-in-out hover:scale-105"
+                >
+                  <a href="#">Kimlar uchun</a>
+                </li>
+                <li
+                  class="hover:text-green-600 hover:ease-in-out hover:scale-105"
+                >
+                  <a href="#siznikutmoqda">Sizni nimalar kutmoqda</a>
+                </li>
+                <li
+                  class="hover:text-green-600 hover:ease-in-out hover:scale-105"
+                >
+                  <a href="#result">Natijalar</a>
+                </li>
+                <li
+                  class="hover:text-green-600 hover:ease-in-out hover:scale-105"
+                >
+                  <a href="#mamnun">O'quvchilarimiz bizdan mamnun</a>
+                </li>
+              </ul>
+            </nav>
+
+            <div
+              class="RightIcon cursor-pointer lg:hidden h-10 p-2.5 bg-[#39cc46] rounded-[100px] justify-center items-center gap-2.5 inline-flex"
+              id="menu-button"
+            >
+              <div class="MenuIcon w-5 h-5 relative">
+                <img src="./images/menu - icon.svg" alt="" />
+              </div>
             </div>
           </div>
-        </div>
-      </header>
+        </header>
 
-      <!-- Modal -->
-      <div
-        id="menu-modal"
-        class="fixed inset-0 bg-gray-800 bg-opacity-50 z-40 hidden"
-      >
+        <!-- Modal -->
         <div
-          id="menu-content"
-          class="fixed inset-0 bg-white shadow-lg transition-transform transform"
+          id="menu-modal"
+          class="fixed inset-0 bg-gray-800 bg-opacity-50 z-40 hidden"
         >
           <div
-            class="Header mt-[20px] h-[60px] flex items-center pl-6 justify-between"
+            id="menu-content"
+            class="fixed inset-0 bg-white shadow-lg transition-transform transform"
           >
             <div
-              class="Header h-[60px] pr-2.5 py-2.5 bg-[#f5f6f9] mr-[20px] rounded-[100px] w-full border-2 border-white backdrop-blur-[50px] justify-between items-center inline-flex"
+              class="Header mt-[20px] h-[60px] flex items-center pl-6 justify-between"
             >
               <div
-                class="Logotype1 w-[91px] h-6 ml-4 relative flex-col justify-start items-start flex"
-              >
-                <img src="./images/LOGOTYPE.svg" alt="" />
-              </div>
-              <div
-                id="close-modal"
-                class="RightIcon self-stretch cursor-pointer p-2.5 bg-[#ff2466] rounded-[100px] justify-center items-center gap-2.5 inline-flex"
-              >
-                <div class="CloseIcon w-5 h-5 relative">
-                  <img src="./images/close - icon.svg" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="Tab flex flex-col mt-[50px] justify-center items-center space-y-4 p-6"
-          >
-            <a
-              href="#"
-              class="block p-4 bg-[#f5f6f9] rounded-full text-[#202024] text-base font-medium text-center w-full max-w-sm"
-            >
-              Kimlar uchun
-            </a>
-            <a
-              href="#"
-              class="block p-4 bg-[#f5f6f9] rounded-full text-[#202024] text-base font-medium text-center w-full max-w-sm"
-            >
-              Sizni nimalar kutmoqda
-            </a>
-            <a
-              href="#"
-              class="block p-4 bg-[#f5f6f9] rounded-full text-[#202024] text-base font-medium text-center w-full max-w-sm"
-            >
-              Natijalar
-            </a>
-            <a
-              href="#"
-              class="block p-4 bg-[#f5f6f9] rounded-full text-[#202024] text-base font-medium text-center w-full max-w-sm"
-            >
-              O‘quvchilarimiz bizdan mamnun
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <section class="px-0 w-full mt-[100px]">
-        <div class="container mx-auto text-center py-6">
-          <h1
-            class="text-4xl md:text-3xl sm:text-2xl font-bold text-[#39cc46] mb-6"
-          >
-            Rus tili
-          </h1>
-          <div
-            class="border-2 border-green-500 py-2 rounded-es-3xl rounded-se-3xl"
-          >
-            <p
-              class="lg:text-2xl md:text-xl p-[10px] text-sm text-black max-w-3xl mx-auto"
-            >
-              Zamonaviy o'quv platformasida video darslar, mashqlar, yodlash
-              uchun so'zlar, mentor yordami bilan 3 oyda rus tilida erkin
-              gaplashing
-            </p>
-          </div>
-
-          <div class="relative inline-block mt-8">
-            <div
-              class="absolute left-0 top-1/2 transform w-[57px] h-[49px] md:w-[120px] md:h-[50px] -translate-y-1/2 md:-translate-x-full -translate-x-10 text-green-500"
-            >
-              <img src="./images/Left (1).svg" alt="" />
-            </div>
-            <a
-              href="#form"
-              class="inline-block mx-6 border-2 border-green-600 animate-bounce bg-[#39cc46] text-white md:text-lg sm:text-base text-sm font-semibold py-3 md:px-20 px-[54px] rounded-full shadow-lg transition"
-            >
-              Kursga yozilish
-            </a>
-            <div
-              class="absolute right-0 top-1/2 transform w-[57px] h-[49px] md:w-[120px] md:h-[50px] -translate-y-1/2 translate-x-10 md:translate-x-full text-green-500"
-            >
-              <img src="./images/Right (2).svg" alt="" />
-            </div>
-          </div>
-
-          <p class="text-sm md:text-xs sm:text-[12px] text-gray-500 mt-4">
-            0 dan boshlab, Grammatika yetarli darajada bo'lmagan insonlar,
-            Muloqot qilishdagi muammosi borlar
-          </p>
-        </div>
-      </section>
-
-      <section class="px-0 w-full">
-        <div class="container mx-auto text-center py-6">
-          <div class="grid md:grid-cols-2 grid-cols-1 gap-5">
-            <div
-              class="Card h-[168px] relative bg-white rounded-tl-[5px] rounded-tr-[35px] rounded-bl-[35px] rounded-br-[5px] transition duration-300 ease-in-out hover:scale-[1.03]"
-            >
-              <div
-                class="Frame1 left-[429px] top-[-16px] absolute justify-start items-center gap-2.5 hidden md:inline-flex"
+                class="Header h-[60px] pr-2.5 py-2.5 bg-[#f5f6f9] mr-[20px] rounded-[100px] w-full border-2 border-white backdrop-blur-[50px] justify-between items-center inline-flex"
               >
                 <div
-                  class="BoshlanishIcon w-[164px] h-[164px] relative origin-top-left rotate-[5deg]"
+                  class="Logotype1 w-[91px] h-6 ml-4 relative flex-col justify-start items-start flex"
                 >
-                  <img src="./images/rascet.svg" alt="" />
+                  <img src="./images/LOGOTYPE.svg" alt="" />
                 </div>
-              </div>
-              <div
-                class="left-[35px] top-[104px] absolute text-[#202024] xl:text-xl text-base font-medium font-['Helvetica Neue'] leading-normal"
-              >
-                To‘lovdan so‘ng darhol darslar boshlanadi
-              </div>
-              <div
-                class="Content left-[40px] top-[40px] absolute justify-start items-center gap-[15px] inline-flex"
-              >
                 <div
-                  class="Icon p-2.5 bg-[#f1f3f6] rounded-[100px] justify-center items-center gap-2.5 flex"
+                  id="close-modal"
+                  class="RightIcon self-stretch cursor-pointer p-2.5 bg-[#ff2466] rounded-[100px] justify-center items-center gap-2.5 inline-flex"
                 >
-                  <div class="BoshlanishIcon w-6 h-6 relative">
-                    <img src="./images/Boshlanish - icon.svg" alt="" />
+                  <div class="CloseIcon w-5 h-5 relative">
+                    <img src="./images/close - icon.svg" alt="" />
                   </div>
                 </div>
-                <div
-                  class="Boshlanish text-[#39cc46] text-[26px] font-bold font-['Helvetica Neue'] leading-loose"
-                >
-                  Boshlanish
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="Card h-[168px] relative bg-white rounded-tr-[5px] rounded-tl-[35px] rounded-br-[35px] rounded-bl-[5px] transition duration-300 ease-in-out hover:scale-[1.03]"
-            >
-              <div
-                class="Frame1 left-[429px] hidden top-[-16px] absolute justify-start items-center gap-2.5 md:inline-flex"
-              >
-                <div
-                  class="BoshlanishIcon w-[164px] h-[164px] relative origin-top-left rotate-[5deg]"
-                >
-                  <img src="./images/NatijaKubok.svg" alt="" />
-                </div>
-              </div>
-              <div
-                class="left-[40px] top-[104px] absolute text-[#202024] xl:text-xl text-base font-medium font-['Helvetica Neue'] leading-normal"
-              >
-                5500 dan ortiq insonlar biz bilan Rus Tilini o‘rganishgan
-              </div>
-              <div
-                class="Content left-[40px] top-[40px] absolute justify-start items-center gap-[15px] inline-flex"
-              >
-                <div
-                  class="Icon p-2.5 bg-[#f1f3f6] rounded-[100px] justify-center items-center gap-2.5 flex"
-                >
-                  <div class="w-6 h-6 relative">
-                    <img src="./images/Natija - icon.svg" alt="" />
-                  </div>
-                </div>
-                <div
-                  class="Boshlanish text-[#39cc46] text-[26px] font-bold font-['Helvetica Neue'] leading-loose"
-                >
-                  Natija
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="Card h-[168px] relative bg-white rounded-tl-[35px] rounded-tr-[5px] rounded-bl-[5px] rounded-br-[35px] transition duration-300 ease-in-out hover:scale-[1.03]"
-            >
-              <div
-                class="Frame1 left-[429px] hidden top-[-16px] absolute justify-start items-center gap-2.5 md:inline-flex"
-              >
-                <div
-                  class="DavomiyligiIcon w-[164px] h-[164px] relative origin-top-left rotate-[5deg]"
-                >
-                  <img src="./images/calendar.svg" alt="" />
-                </div>
-              </div>
-              <div
-                class="Oy left-[40px] top-[104px] absolute text-[#202024] xl:text-xl text-base font-medium font-['Helvetica Neue'] leading-normal"
-              >
-                3 Oy
-              </div>
-              <div
-                class="Content left-[40px] top-[40px] absolute justify-start items-center gap-[15px] inline-flex"
-              >
-                <div
-                  class="Icon p-2.5 bg-[#f1f3f6] rounded-[100px] justify-center items-center gap-2.5 flex"
-                >
-                  <div class="DavomiyligiIcon w-6 h-6 relative">
-                    <img src="./images/Davomiyligi - icon.svg" alt="" />
-                  </div>
-                </div>
-                <div
-                  class="Davomiyligi text-[#39cc46] text-[26px] font-bold font-['Helvetica Neue'] leading-loose"
-                >
-                  Davomiyligi
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="Card h-[168px] relative bg-white rounded-tl-[5px] rounded-tr-[35px] rounded-bl-[35px] rounded-br-[5px] transition duration-300 ease-in-out hover:scale-[1.03]"
-            >
-              <div
-                class="Frame1 left-[429px] hidden top-[-16px] absolute justify-start items-center gap-2.5 md:inline-flex"
-              >
-                <div
-                  class="OQishTuriIcon w-[164px] h-[164px] relative origin-top-left rotate-[5deg]"
-                >
-                  <img src="./images/O'qish turi.svg" alt="" />
-                </div>
-              </div>
-              <div
-                class="left-[40px] top-[104px] absolute text-[#202024] xl:text-xl text-base font-medium font-['Helvetica Neue'] leading-normal"
-              >
-                Masofaviy (Online)
-              </div>
-              <div
-                class="Content left-[40px] top-[40px] absolute justify-start items-center gap-[15px] inline-flex"
-              >
-                <div
-                  class="Icon p-2.5 bg-[#f1f3f6] rounded-[100px] justify-center items-center gap-2.5 flex"
-                >
-                  <div class="OQishTuriIcon w-6 h-6 relative">
-                    <img src="./images/O'qish turi - icon.svg" alt="" />
-                  </div>
-                </div>
-                <div
-                  class="OQishTuri text-[#39cc46] text-[26px] font-bold font-['Helvetica Neue'] leading-loose"
-                >
-                  O'qish turi
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="PrepUzMaqsadi w-full bg-white rounded-[50px] mt-[70px] flex flex-col lg:flex-row justify-start items-center gap-4 xl:gap-[60px] p-4 md:pl-2.5 md:pr-14 md:py-2.5"
-          >
-            <div
-              class="Image flex justify-center md:justify-start items-center"
-            >
-              <img
-                class="rounded-[50px] w-full md:w-[300px] lg:w-[480px] xl:w-[420px] h-auto"
-                src="./images/premium_photo-1681681082335-f87e62a789fe-transformed 1.png"
-                alt="Premium Photo"
-              />
-            </div>
-            <div
-              class="Text flex flex-col justify-center items-start gap-4 md:gap-[30px]"
-            >
-              <div
-                class="text-[#39cc46] text-xl md:text-xl lg:text-2xl xl:text-4xl font-bold font-['Helvetica Neue'] md:text-left"
-              >
-                Prep.uz onlayn ta’lim platformasining maqsadi
-              </div>
-              <div
-                class="w-full text-[#202024] text-sm md:text-xl xl:text-3xl font-medium font-['Helvetica Neue'] leading-[28px] md:leading-[38px] md:text-left"
-              >
-                “Siz rus tilini oson va bexavotir o‘rganishingiz uchun poydevor
-                yaratish”
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="SizniKutmoqda mt-[60px] text-center text-[#39cc46] text-3xl md:text-[44px] font-bold font-['Helvetica Neue'] leading-[52px] tracking-wide"
-          >
-            Sizni kutmoqda
-          </div>
-          <div
-            class="Accordion hidden w-full mt-[40px] h-[1000px] flex-col justify-start items-start lg:inline-flex"
-          >
-            <div
-              class="Cell self-stretch px-[50px] pb-[50px] pt-[50px] hover:pb-[120px] hover:bg-[#39cc46] ease-in-out hover:text-white bg-white rounded-tl-[35px] rounded-tr-[35px] border-b-2 border-[#f5f6f9] justify-start items-center gap-[30px] inline-flex lg:flex lg:flex-wrap relative overflow-hidden"
-            >
-              <div
-                class="Icon p-[25px] bg-[#f1f3f6] rounded-[100px] justify-center items-center gap-2.5 flex"
-              >
-                <div class="w-[50px] h-[50px] relative">
-                  <img src="./images/online user - icon.svg" alt="" />
-                </div>
-              </div>
-              <div
-                class="Text flex-col justify-start items-start gap-[30px] inline-flex relative"
-              >
-                <div class="flex justify-between">
-                  <p
-                    class="OnlaynDars whitespace-nowrap md:text-3xl xl:text-4xl font-bold font-['Helvetica Neue'] leading-[44px]"
-                  >
-                    Onlayn dars
-                  </p>
-                  <div
-                    class="LinkIcon w-[50px] right-0 xl:ml-auto h-[50px] relative"
-                  >
-                    <a href="">
-                      <img src="./images/link - icon.svg" alt="" />
-                    </a>
-                  </div>
-                </div>
-                <p
-                  class="SlideText text-white break-words text-start h-[80px] w-[500px] xl:w-[700px] text-[20px] xl:text-[26px] font-medium font-['Helvetica Neue'] leading-loose absolute bottom-0 opacity-0 transition-all duration-300 transform translate-y-full"
-                >
-                  Xohlagan joyda va vaqtda darsga kirish imkoniyati, 24/7
-                  o‘zingizga qulay bo‘lgan joyda rus tilini o‘rgana olasiz
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="Cell self-stretch px-[50px] py-[25px] hover:pb-[100px] hover:bg-[#39cc46] ease-in-out hover:text-white bg-white border-b-2 border-[#f5f6f9] justify-start items-center gap-[30px] inline-flex"
-            >
-              <div
-                class="Icon p-[25px] bg-[#f1f3f6] rounded-[100px] justify-center items-center gap-2.5 flex"
-              >
-                <div class="w-[50px] h-[50px] relative">
-                  <img src="./images/online cabinet - icon.svg" alt="" />
-                </div>
-              </div>
-              <div
-                class="Text flex-col justify-start items-start gap-[30px] inline-flex relative"
-              >
-                <div class="flex justify-between">
-                  <p
-                    class="OnlaynDars whitespace-nowrap md:text-3xl xl:text-4xl font-bold font-['Helvetica Neue'] leading-[44px]"
-                  >
-                    Qulay platforma va shaxsiy kabinet
-                  </p>
-                  <div class="LinkIcon w-[50px] h-[50px] relative">
-                    <a href="">
-                      <img src="./images/link - icon.svg" alt="" />
-                    </a>
-                  </div>
-                </div>
-                <p
-                  class="SlideText text-white break-words text-start h-[80px] w-[500px] xl:w-[700px] text-[20px] xl:text-[26px] font-medium font-['Helvetica Neue'] leading-loose absolute bottom-0 opacity-0 transition-all duration-300 transform translate-y-full"
-                >
-                  Barcha darslar, mashqlar, yodlash uchun so'zlar, testlar, har
-                  bir o'quvchi uchun alohida taqdim etiladi
-                </p>
               </div>
             </div>
             <div
-              class="Cell self-stretch px-[50px] py-[25px] bg-white hover:pb-[100px] hover:bg-[#39cc46] ease-in-out hover:text-white border-b-2 border-[#f5f6f9] justify-start items-center gap-[30px] inline-flex"
+              class="Tab flex flex-col mt-[50px] justify-center items-center space-y-4 p-6"
             >
-              <div
-                class="Icon p-[25px] bg-[#f1f3f6] rounded-[100px] justify-center items-center gap-2.5 flex"
+              <a
+                href="#"
+                class="block p-4 bg-[#f5f6f9] rounded-full text-[#202024] text-base font-medium text-center w-full max-w-sm"
               >
-                <div class="KnowledgeIcon w-[50px] h-[50px] relative">
-                  <img src="./images/knowledge - icon.svg" alt="" />
-                </div>
-              </div>
-              <div
-                class="Text flex-col justify-start items-start gap-[30px] inline-flex relative"
+                Kimlar uchun
+              </a>
+              <a
+                href="#siznikutmoqda"
+                class="block p-4 bg-[#f5f6f9] rounded-full text-[#202024] text-base font-medium text-center w-full max-w-sm"
               >
-                <div class="flex justify-between">
-                  <p
-                    class="OnlaynDars whitespace-nowrap md:text-3xl xl:text-4xl font-bold font-['Helvetica Neue'] leading-[44px]"
-                  >
-                    Maxsus o‘qitish
-                  </p>
-                  <div class="LinkIcon w-[50px] h-[50px] relative">
-                    <a href="">
-                      <img src="./images/link - icon.svg" alt="" />
-                    </a>
-                  </div>
-                </div>
-                <p
-                  class="SlideText text-white break-words text-start h-[80px] w-[500px] xl:w-[700px] text-[20px] xl:text-[26px] font-medium font-['Helvetica Neue'] leading-loose absolute bottom-0 opacity-0 transition-all duration-300 transform translate-y-full"
-                >
-                  Darslarni boshlashdan oldin maxsus reja taqdim etiladi va o'z
-                  majburiyatlaringiz bilan tanishtiriladi
-                </p>
-              </div>
-            </div>
-            <div
-              class="Cell self-stretch px-[50px] py-[25px] hover:pb-[100px] hover:bg-[#39cc46] ease-in-out hover:text-white bg-white border-b-2 border-[#f5f6f9] justify-start items-center gap-[30px] inline-flex"
-            >
-              <div
-                class="Icon p-[25px] bg-[#f1f3f6] rounded-[100px] justify-center items-center gap-2.5 flex"
+                Sizni nimalar kutmoqda
+              </a>
+              <a
+                href="#"
+                class="block p-4 bg-[#f5f6f9] rounded-full text-[#202024] text-base font-medium text-center w-full max-w-sm"
               >
-                <div class="MentorIcon w-[50px] h-[50px] relative">
-                  <img src="./images/mentor - icon.svg" alt="" />
-                </div>
-              </div>
-              <div
-                class="Text flex-col justify-start items-start gap-[30px] inline-flex relative"
+                Natijalar
+              </a>
+              <a
+                href="#"
+                class="block p-4 bg-[#f5f6f9] rounded-full text-[#202024] text-base font-medium text-center w-full max-w-sm"
               >
-                <div class="flex justify-between">
-                  <p
-                    class="OnlaynDars md:text-3xl xl:text-4xl font-bold font-['Helvetica Neue'] leading-[44px]"
-                  >
-                    Mentor
-                  </p>
-                  <div class="LinkIcon w-[50px] h-[50px] relative">
-                    <a href="">
-                      <img src="./images/link - icon.svg" alt="" />
-                    </a>
-                  </div>
-                </div>
-                <p
-                  class="SlideText text-white break-words text-start h-[80px] w-[500px] xl:w-[700px] text-[20px] xl:text-[26px] font-medium font-['Helvetica Neue'] leading-loose absolute bottom-0 opacity-0 transition-all duration-300 transform translate-y-full"
-                >
-                  Har hafta 2 marotaba 30 daqiqadan mentor bilan onlayn suhbat
-                  bo'lib o'tadi
-                </p>
-              </div>
-            </div>
-            <div
-              class="Cell self-stretch px-[50px] py-[25px] hover:pb-[100px] hover:bg-[#39cc46] ease-in-out hover:text-white bg-white border-b-2 border-[#f5f6f9] justify-start items-center gap-[30px] inline-flex"
-            >
-              <div
-                class="Icon p-[25px] bg-[#f1f3f6] rounded-[100px] justify-center items-center gap-2.5 flex"
-              >
-                <div class="DiplomaIcon w-[50px] h-[50px] relative">
-                  <img src="./images/diploma - icon.svg" alt="" />
-                </div>
-              </div>
-              <div
-                class="Text flex-col justify-start items-start gap-[30px] inline-flex relative"
-              >
-                <div class="flex justify-between">
-                  <p
-                    class="OnlaynDars md:text-3xl xl:text-4xl font-bold font-['Helvetica Neue'] leading-[44px]"
-                  >
-                    Sertifikat
-                  </p>
-                  <div class="LinkIcon w-[50px] h-[50px] relative">
-                    <a href="">
-                      <img src="./images/link - icon.svg" alt="" />
-                    </a>
-                  </div>
-                </div>
-                <p
-                  class="SlideText text-white break-words text-start h-[80px] w-[500px] xl:w-[700px] text-[20px] xl:text-[26px] font-medium font-['Helvetica Neue'] leading-loose absolute bottom-0 opacity-0 transition-all duration-300 transform translate-y-full"
-                >
-                  Siz bizning maxsus Rus tili kursimizni muvaffaqiyatli
-                  bitirganligingizhaqida sertifikat taqdim etiladi
-                </p>
-              </div>
-            </div>
-            <div
-              class="Cell self-stretch px-[50px] py-[25px] hover:pb-[100px] hover:bg-[#39cc46] ease-in-out hover:text-white bg-white rounded-bl-[35px] rounded-br-[35px] justify-start items-center gap-[30px] inline-flex"
-            >
-              <div
-                class="Icon p-[25px] bg-[#f1f3f6] rounded-[100px] justify-center items-center gap-2.5 flex"
-              >
-                <div class="MentorHelpIcon w-[50px] h-[50px] relative">
-                  <img src="./images/mentor-help - icon.svg" alt="" />
-                </div>
-              </div>
-              <div
-                class="Text flex-col justify-start items-start gap-[30px] inline-flex relative"
-              >
-                <div class="flex justify-between">
-                  <p
-                    class="OnlaynDars whitespace-nowrap md:text-3xl xl:text-4xl font-bold font-['Helvetica Neue'] leading-[44px]"
-                  >
-                    O'zaro yordam
-                  </p>
-                  <div class="LinkIcon w-[50px] h-[50px] relative">
-                    <a href="">
-                      <img src="./images/link - icon.svg" alt="" />
-                    </a>
-                  </div>
-                </div>
-                <p
-                  class="SlideText text-white break-words text-start h-[80px] w-[500px] xl:w-[700px] text-[20px] xl:text-[26px] font-medium font-['Helvetica Neue'] leading-normal absolute bottom-0 opacity-0 transition-all duration-300 transform translate-y-full"
-                >
-                  Har bir talaba kurs davomida yopiq telegramguruhda qo'llab
-                  quvvatlanadi Umumiy savol javob va foydali ma'lumotlar berib
-                  boriladi
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div
-            id="scrollContainer"
-            class="flex lg:hidden overflow-x-auto scrollbar-hidden gap-[20px] mt-[30px]"
-          >
-            <div
-              class="Card min-w-[237px] h-[284px] relative bg-white rounded-[25px]"
-            >
-              <div
-                class="Icon p-[15px] left-[25px] top-[25px] absolute bg-[#f1f3f6] rounded-[100px] justify-center items-center gap-2.5 inline-flex"
-              >
-                <div class="OnlineUserIcon w-[30px] h-[30px] relative">
-                  <img src="./images/online user - icon.svg" alt="" />
-                </div>
-              </div>
-              <div
-                class="Text left-[15px] top-[100px] absolute flex-col justify-start items-start gap-[15px] inline-flex"
-              >
-                <div
-                  class="OnlaynDars text-black text-xl font-bold font-['Helvetica Neue'] leading-normal"
-                >
-                  Onlayn dars
-                </div>
-                <div
-                  class="text-start text-[#202024] text-sm font-bold font-['Helvetica Neue'] leading-tight tracking-tight"
-                >
-                  Xohlagan joyda va vaqtda darsga kirish imkoniyati, 24/7
-                  o‘zingizga qulay bo‘lgan joyda <br />
-                  uyda, ko‘chada, kafeda, tog’da va choyxonada ham rus tilini
-                  o‘rgana olasiz
-                </div>
-              </div>
-            </div>
-            <div
-              class="Card min-w-[237px] h-[284px] relative bg-white rounded-[25px]"
-            >
-              <div
-                class="Icon p-[15px] left-[25px] top-[25px] absolute bg-[#f1f3f6] rounded-[100px] justify-center items-center gap-2.5 inline-flex"
-              >
-                <div class="OnlineUserIcon w-[30px] h-[30px] relative">
-                  <img src="./images/online cabinet - icon.svg" alt="" />
-                </div>
-              </div>
-              <div
-                class="Text left-[15px] top-[100px] absolute flex-col justify-start items-start gap-[15px] inline-flex"
-              >
-                <div
-                  class="OnlaynDars text-black text-start text-xl font-bold font-['Helvetica Neue'] leading-normal"
-                >
-                  Qulay platforma va shaxsiy kabinet
-                </div>
-                <div
-                  class="w-[207px] text-[#202024] text-sm text-start font-bold font-['Helvetica Neue'] leading-tight tracking-tight"
-                >
-                  Barcha darslar, mashqlar, yodlash uchun so'zlar, testlar, har
-                  bir o'quvchi uchun alohida taqdim etiladi
-                </div>
-              </div>
-            </div>
-            <div
-              class="Card min-w-[237px] h-[284px] relative bg-white rounded-[25px]"
-            >
-              <div
-                class="Icon p-[15px] left-[25px] top-[25px] absolute bg-[#f1f3f6] rounded-[100px] justify-center items-center gap-2.5 inline-flex"
-              >
-                <div class="OnlineUserIcon w-[30px] h-[30px] relative">
-                  <img src="./images/knowledge - icon.svg" alt="" />
-                </div>
-              </div>
-              <div
-                class="Text left-[15px] top-[100px] absolute flex-col justify-start items-start gap-[15px] inline-flex"
-              >
-                <div
-                  class="OnlaynDars text-black text-xl font-bold font-['Helvetica Neue'] leading-normal"
-                >
-                  Maxsus o‘qitish
-                </div>
-                <div
-                  class="w-[207px] text-start text-[#202024] text-sm font-bold font-['Helvetica Neue'] leading-tight tracking-tight"
-                >
-                  Darslarni boshlashdan oldin maxsus reja taqdim etiladi va o'z
-                  majburiyatlaringiz bilan tanishtiriladi
-                </div>
-              </div>
-            </div>
-            <div
-              class="Card min-w-[237px] h-[284px] relative bg-white rounded-[25px]"
-            >
-              <div
-                class="Icon p-[15px] left-[25px] top-[25px] absolute bg-[#f1f3f6] rounded-[100px] justify-center items-center gap-2.5 inline-flex"
-              >
-                <div class="OnlineUserIcon w-[30px] h-[30px] relative">
-                  <img src="./images/mentor - icon.svg" alt="" />
-                </div>
-              </div>
-              <div
-                class="Text left-[15px] top-[100px] absolute flex-col justify-start items-start gap-[15px] inline-flex"
-              >
-                <div
-                  class="OnlaynDars text-black text-xl font-bold font-['Helvetica Neue'] leading-normal"
-                >
-                  Mentor
-                </div>
-                <div
-                  class="w-[207px] text-start text-[#202024] text-sm font-bold font-['Helvetica Neue'] leading-tight tracking-tight"
-                >
-                  Har hafta 2 marotaba 30 daqiqadan mentor bilan onlayn suhbat
-                  bo'lib o'tadi
-                </div>
-              </div>
-            </div>
-            <div
-              class="Card min-w-[237px] h-[284px] relative bg-white rounded-[25px]"
-            >
-              <div
-                class="Icon p-[15px] left-[25px] top-[25px] absolute bg-[#f1f3f6] rounded-[100px] justify-center items-center gap-2.5 inline-flex"
-              >
-                <div class="OnlineUserIcon w-[30px] h-[30px] relative">
-                  <img src="./images/diploma - icon.svg" alt="" />
-                </div>
-              </div>
-              <div
-                class="Text left-[15px] top-[100px] absolute flex-col justify-start items-start gap-[15px] inline-flex"
-              >
-                <div
-                  class="OnlaynDars text-black text-xl font-bold font-['Helvetica Neue'] leading-normal"
-                >
-                  Sertifikat
-                </div>
-                <div
-                  class="w-[207px] text-[#202024] text-start text-sm font-bold font-['Helvetica Neue'] leading-tight tracking-tight"
-                >
-                  Siz bizning maxsus Rus tili kursimizni muvaffaqiyatli
-                  bitirganligingizhaqida sertifikat taqdim etiladi
-                </div>
-              </div>
-            </div>
-            <div
-              class="Card min-w-[237px] h-[284px] relative bg-white rounded-[25px]"
-            >
-              <div
-                class="Icon p-[15px] left-[25px] top-[25px] absolute bg-[#f1f3f6] rounded-[100px] justify-center items-center gap-2.5 inline-flex"
-              >
-                <div class="OnlineUserIcon w-[30px] h-[30px] relative">
-                  <img src="./images/mentor-help - icon.svg" alt="" />
-                </div>
-              </div>
-              <div
-                class="Text left-[15px] top-[100px] absolute flex-col justify-start items-start gap-[15px] inline-flex"
-              >
-                <div
-                  class="OnlaynDars text-black text-xl font-bold font-['Helvetica Neue'] leading-normal"
-                >
-                  O'zaro yordam
-                </div>
-                <div
-                  class="w-[207px] text-[#202024] text-start text-sm font-bold font-['Helvetica Neue'] leading-tight tracking-tight"
-                >
-                  Har bir talaba kurs davomida yopiq telegramguruhda qo'llab
-                  quvvatlanadi Umumiy savol javob va foydali ma'lumotlar berib
-                  boriladi
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="relative lg:hidden gap-[30px] mt-[20px]">
-            <button
-              id="backButton"
-              class="Back h-11 p-2.5 bg-white rounded-[100px] justify-center items-center gap-2.5 inline-flex"
-            >
-              <div class="LeftIcon w-6 h-6 relative">
-                <img src="./images/left - icon.svg" alt="" />
-              </div>
-            </button>
-            <button
-              id="nextButton"
-              class="Next h-11 p-2.5 bg-[#39cc46] rounded-[100px] justify-center items-center gap-2.5 inline-flex"
-            >
-              <div class="RightIcon w-6 h-6 relative">
-                <img src="./images/right - icon.svg" alt="" />
-              </div>
-            </button>
-          </div>
-          <div class="relative inline-block mt-8">
-            <div
-              class="absolute left-0 top-1/2 transform w-[57px] h-[49px] md:w-[120px] md:h-[50px] -translate-y-1/2 md:-translate-x-full -translate-x-10 text-green-500"
-            >
-              <img src="./images/Left (1).svg" alt="" />
-            </div>
-            <a
-              href="#form"
-              class="inline-block border-2 border-green-600 mx-6 animate-bounce bg-[#39cc46] text-white md:text-lg sm:text-base text-sm font-semibold py-3 md:px-20 px-[54px] rounded-full shadow-lg transition"
-            >
-              Kursga yozilish
-            </a>
-            <div
-              class="absolute right-0 top-1/2 transform w-[57px] h-[49px] md:w-[120px] md:h-[50px] -translate-y-1/2 translate-x-10 md:translate-x-full text-green-500"
-            >
-              <img src="./images/Right (2).svg" alt="" />
+                O‘quvchilarimiz bizdan mamnun
+              </a>
             </div>
           </div>
         </div>
 
-        <div
-          class="mt-20 text-center text-[#39cc46] text-3xl md:text-[44px] font-bold font-['Helvetica Neue'] leading-[52px] tracking-wide"
-        >
-          Rus tili - ajoyib<br />Ammo kursni tugatib siz nimalarga erisha olasiz
-        </div>
-      </section>
-    </div>
-    <div class="mt-20 px-4">
-      <div
-        class="flex overflow-hidden flex-wrap md:overflow-x-auto md:flex-nowrap scrollbar-hidden gap-5"
-      >
-        <div
-          class="Card1 lg:p-10 md:p-6 p-4 bg-white rounded-tl-[5px] rounded-tr-[35px] rounded-bl-[35px] rounded-br-[5px] flex-col items-start gap-[25px] inline-flex"
-        >
-          <div
-            class="Icon w-[50px] h-[50px] relative flex-col justify-start items-start flex"
-          >
-            <img src="./images/icon-77.svg" alt="" />
-          </div>
-          <div
-            class="md:w-[408px] w-full leading-tight text-[#202024] text-base md:text-[22px] lg:text-[26px] font-medium font-['Helvetica Neue']"
-          >
-            Rus tilida siz istagan universitetda, kollejda o‘qish imkoniyati.
-            Rossiya OTMlariga kirish imkoniyati mavjudligi
-          </div>
-        </div>
-        <div
-          class="Card1 md:p-10 p-4 bg-white rounded-tl-[5px] rounded-tr-[35px] rounded-bl-[35px] rounded-br-[5px] flex-col items-start gap-[25px] inline-flex"
-        >
-          <div
-            class="Icon w-[50px] h-[50px] relative flex-col justify-start items-start flex"
-          >
-            <img src="./images/audio.svg" alt="" />
-          </div>
-          <div
-            class="md:w-[408px] w-full leading-tight text-[#202024] text-base md:text-[22px] lg:text-[26px] font-medium font-['Helvetica Neue']"
-          >
-            Rus tilida siz istagan universitetda, kollejda o‘qish imkoniyati.
-            Rossiya OTMlariga kirish imkoniyati mavjudligi
-          </div>
-        </div>
-        <div
-          class="Card1 md:p-10 p-4 bg-white rounded-tl-[5px] rounded-tr-[35px] rounded-bl-[35px] rounded-br-[5px] flex-col items-start gap-[25px] inline-flex"
-        >
-          <div
-            class="Icon w-[50px] h-[50px] relative flex-col justify-start items-start flex"
-          >
-            <img src="./images/bag.svg" alt="" />
-          </div>
-          <div
-            class="md:w-[408px] w-full leading-tight text-[#202024] text-base md:text-[22px] lg:text-[26px] font-medium font-['Helvetica Neue']"
-          >
-            Rus tilida siz istagan universitetda, kollejda o‘qish imkoniyati.
-            Rossiya OTMlariga kirish imkoniyati mavjudligi
-          </div>
-        </div>
-        <div
-          class="Card1 md:p-10 p-4 bg-white rounded-tl-[5px] rounded-tr-[35px] rounded-bl-[35px] rounded-br-[5px] flex-col items-start gap-[25px] inline-flex"
-        >
-          <div
-            class="Icon w-[50px] h-[50px] relative flex-col justify-start items-start flex"
-          >
-            <img src="./images/Icon (34).svg" alt="" />
-          </div>
-          <div
-            class="md:w-[408px] w-full leading-tight text-[#202024] text-base md:text-[22px] lg:text-[26px] font-medium font-['Helvetica Neue']"
-          >
-            Rus tilida siz istagan universitetda, kollejda o‘qish imkoniyati.
-            Rossiya OTMlariga kirish imkoniyati mavjudligi
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="lg:px-[120px] px-1">
-      <section class="container mx-auto text-center py-6">
-        <div
-          class="mt-20 text-center leading-tight text-[#39cc46] text-2xl md:text-[44px] font-bold font-['Helvetica Neue'] tracking-wide"
-        >
-          Kursimiz haqida o‘quvchilarimiz fikrini <br />
-          bilishni istaysizmi?
-        </div>
-      </section>
-    </div>
-    <section class="carusell_main">
-      <div class="owl-carousel owl-theme carusell">
-        <div class="item">
-          <div
-            class="relative w-full max-w-[590px] h-[254px] bg-white rounded-[35px] p-6 sm:p-8 overflow-hidden"
-          >
+        <section class="px-0 w-full mt-[100px]">
+          <div class="container mx-auto text-center py-6">
+            <h1
+              class="text-[30px] md:text-[44px] sm:text-2xl font-bold text-[#39cc46] mb-6"
+            >
+              Rus tili
+            </h1>
             <div
-              class="absolute w-[200px] h-[200px] bg-green-600 rounded-full blur-[150px] -top-[50px] -left-[50px]"
-            ></div>
-            <div
-              class="absolute w-[300px] h-[300px] bg-yellow-300 rounded-full blur-[150px] top-[100px] left-[300px] lg:left-[350px]"
-            ></div>
-
-            <div class="relative z-10">
-              <h3
-                class="text-[#202024] text-[20px] sm:text-[26px] font-medium mb-2"
+              class="border-2 border-green-500 py-2 bg-white rounded-es-3xl rounded-se-3xl"
+            >
+              <p
+                class="lg:text-2xl md:text-xl p-[10px] text-sm text-black max-w-3xl mx-auto"
               >
-                Jamila Eshonqulova
-              </h3>
-              <p class="text-[#202024]/50 text-sm sm:text-base mb-4">
-                21.05.2024
-              </p>
-              <p class="text-[#202024]/50 text-sm md:text-lg">
-                O‘qishdan bo‘sh vaqtlarimda Prep.uz platformasidan Rus tilini
-                o‘rganvomman. 2 oy bo‘ldi uje natijasi zo‘r, barchaga tavsiya
-                qilaman.
+                Zamonaviy o'quv platformasida video darslar, mashqlar, yodlash
+                uchun so'zlar, mentor yordami bilan 3 oyda rus tilida erkin
+                gaplashing
               </p>
             </div>
 
-            <div
-              class="absolute top-6 sm:top-8 right-6 sm:right-8 w-6 sm:w-8 h-6 sm:h-8"
-            >
-              <img src="./images/tire-icon.svg" alt="Quote Icon" />
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div
-            class="relative w-full max-w-[590px] h-[254px] bg-white rounded-[35px] p-6 sm:p-8 overflow-hidden"
-          >
-            <div
-              class="absolute w-[200px] h-[200px] bg-green-600 rounded-full blur-[150px] -top-[50px] -left-[50px]"
-            ></div>
-            <div
-              class="absolute w-[300px] h-[300px] bg-yellow-300 rounded-full blur-[150px] top-[100px] left-[300px] lg:left-[350px]"
-            ></div>
-
-            <div class="relative z-10">
-              <h3
-                class="text-[#202024] text-[20px] sm:text-[26px] font-medium mb-2"
-              >
-                Jamila Eshonqulova
-              </h3>
-              <p class="text-[#202024]/50 text-sm sm:text-base mb-4">
-                21.05.2024
-              </p>
-              <p class="text-[#202024]/50 text-sm md:text-lg">
-                O‘qishdan bo‘sh vaqtlarimda Prep.uz platformasidan Rus tilini
-                o‘rganvomman. 2 oy bo‘ldi uje natijasi zo‘r, barchaga tavsiya
-                qilaman.
-              </p>
-            </div>
-
-            <div
-              class="absolute top-6 sm:top-8 right-6 sm:right-8 w-6 sm:w-8 h-6 sm:h-8"
-            >
-              <img src="./images/tire-icon.svg" alt="Quote Icon" />
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div
-            class="relative w-full max-w-[590px] h-[254px] bg-white rounded-[35px] p-6 sm:p-8 overflow-hidden"
-          >
-            <div
-              class="absolute w-[200px] h-[200px] bg-green-600 rounded-full blur-[150px] -top-[50px] -left-[50px]"
-            ></div>
-            <div
-              class="absolute w-[300px] h-[300px] bg-yellow-300 rounded-full blur-[150px] top-[100px] left-[300px] lg:left-[350px]"
-            ></div>
-
-            <div class="relative z-10">
-              <h3
-                class="text-[#202024] text-[20px] sm:text-[26px] font-medium mb-2"
-              >
-                Jamila Eshonqulova
-              </h3>
-              <p class="text-[#202024]/50 text-sm sm:text-base mb-4">
-                21.05.2024
-              </p>
-              <p class="text-[#202024]/50 text-sm md:text-lg">
-                O‘qishdan bo‘sh vaqtlarimda Prep.uz platformasidan Rus tilini
-                o‘rganvomman. 2 oy bo‘ldi uje natijasi zo‘r, barchaga tavsiya
-                qilaman.
-              </p>
-            </div>
-
-            <div
-              class="absolute top-6 sm:top-8 right-6 sm:right-8 w-6 sm:w-8 h-6 sm:h-8"
-            >
-              <img src="./images/tire-icon.svg" alt="Quote Icon" />
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div
-            class="relative w-full max-w-[590px] h-[254px] bg-white rounded-[35px] p-6 sm:p-8 overflow-hidden"
-          >
-            <div
-              class="absolute w-[200px] h-[200px] bg-green-600 rounded-full blur-[150px] -top-[50px] -left-[50px]"
-            ></div>
-            <div
-              class="absolute w-[300px] h-[300px] bg-yellow-300 rounded-full blur-[150px] top-[100px] left-[300px] lg:left-[350px]"
-            ></div>
-
-            <div class="relative z-10">
-              <h3
-                class="text-[#202024] text-[20px] sm:text-[26px] font-medium mb-2"
-              >
-                Jamila Eshonqulova
-              </h3>
-              <p class="text-[#202024]/50 text-sm sm:text-base mb-4">
-                21.05.2024
-              </p>
-              <p class="text-[#202024]/50 text-sm md:text-lg mb-[20px]">
-                O‘qishdan bo‘sh vaqtlarimda Prep.uz platformasidan Rus tilini
-                o‘rganvomman. 2 oy bo‘ldi uje natijasi zo‘r, barchaga tavsiya
-                qilaman.
-              </p>
-            </div>
-
-            <div
-              class="absolute top-6 sm:top-8 right-6 sm:right-8 w-6 sm:w-8 h-6 sm:h-8"
-            >
-              <img src="./images/tire-icon.svg" alt="Quote Icon" />
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div
-            class="relative w-full max-w-[590px] h-[254px] bg-white rounded-[35px] p-6 sm:p-8 overflow-hidden"
-          >
-            <div
-              class="absolute w-[200px] h-[200px] bg-green-600 rounded-full blur-[150px] -top-[50px] -left-[50px]"
-            ></div>
-            <div
-              class="absolute w-[300px] h-[300px] bg-yellow-300 rounded-full blur-[150px] top-[100px] left-[300px] lg:left-[350px]"
-            ></div>
-
-            <div class="relative z-10">
-              <h3
-                class="text-[#202024] text-[20px] sm:text-[26px] font-medium mb-2"
-              >
-                Jamila Eshonqulova
-              </h3>
-              <p class="text-[#202024]/50 text-sm sm:text-base mb-4">
-                21.05.2024
-              </p>
-              <p class="text-[#202024]/50 text-sm md:text-lg">
-                O‘qishdan bo‘sh vaqtlarimda Prep.uz platformasidan Rus tilini
-                o‘rganvomman. 2 oy bo‘ldi uje natijasi zo‘r, barchaga tavsiya
-                qilaman.
-              </p>
-            </div>
-
-            <div
-              class="absolute top-6 sm:top-8 right-6 sm:right-8 w-6 sm:w-8 h-6 sm:h-8"
-            >
-              <img src="./images/tire-icon.svg" alt="Quote Icon" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- <div class="relative inline-block mt-8 container mx-auto">
-      <div class="page-count text-center">
-        <p class="text-[#202024]/50 text-xl font-medium leading-normal">2/30</p>
-        <div
-          class="slider justify-center text-center items-center gap-2.5 inline-flex"
-        >
-          <button id="back" class="back-icon w-6 h-6 relative origin-top-left">
-            <img src="./images/back-mini.svg" alt="Previous" />
-          </button>
-          <div
-            class="content w-[184px] h-[18px] relative bg-white rounded-[100px]"
-          >
-            <div
-              class="slider-line w-[25px] h-2.5 left-[15px] top-[4px] absolute bg-[#39cc46] rounded-[100px]"
-            ></div>
-          </div>
-          <button id="next" class="next-icon w-6 h-6 relative">
-            <img src="./images/next-mini.svg" alt="Next" />
-          </button>
-        </div>
-      </div>
-    </div> -->
-
-    <section class="lg:px-[120px] px-4 sm:px-2">
-      <div class="container mx-auto py-6">
-        <div
-          class="flex flex-col lg:flex-row gap-8 lg:gap-[50px] mt-[50px] items-center justify-between"
-        >
-          <div class="w-full lg:w-auto">
-            <img
-              class="w-full sm:w-[350px] lg:w-[650px] h-auto rounded-tr-3xl rounded-bl-3xl"
-              src="./images/male-icon.png"
-            />
-          </div>
-          <div>
-            <div
-              class="text-[#39cc46] text-[32px] md:text-[44px] font-bold font-['Helvetica Neue'] leading-tight sm:leading-[52px] tracking-wide"
-            >
-              Lola Polatova
-            </div>
-            <div
-              class="mt-4 text-[#202024] text-[18px] md:text-[26px] font-medium font-['Helvetica Neue'] max-w-full lg:max-w-[700px]"
-            >
-              Rus tili - eng qadimiy tillardan biri bo‘lib, bugungi kunda
-              ko‘pgina mamlakatlarning asosiy tili hisoblanadi. Bu til boy
-              tarixga va madaniy merosga ega bo‘lib, dunyodagi eng ko‘p
-              qo‘llaniladigan tillardan biri.
-            </div>
-            <div
-              class="mt-[32px] p-4 sm:p-[30px] bg-white rounded-tl-[5px] rounded-tr-[35px] rounded-bl-[35px] rounded-br-[5px] border-2 border-[#39cc46] inline-flex"
-            >
+            <div class="relative inline-block mt-8">
               <div
-                class="text-[#202024] text-[18px] md:text-[26px] font-normal font-['Helvetica Neue'] md:leading-loose"
+                class="absolute left-0 top-1/2 transform w-[57px] h-[49px] md:w-[120px] md:h-[50px] -translate-y-1/2 md:-translate-x-full -translate-x-10 text-green-500"
               >
-                Rus tili kursimizni O`zbekistondagi 25 yillik tajribaga ega
-                pedagog Lola Polatova tomonidan taqdim etiladi.
+                <img src="./images/Left (1).svg" alt="" />
               </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="mt-[80px] text-center text-[#39cc46] text-[32px] sm:text-[36px] md:text-[44px] font-bold font-['Helvetica Neue'] leading-tight sm:leading-[52px] tracking-wide"
-        >
-          Kursimizdagi mavjud tariflar
-        </div>
-        <div
-          class="container mx-auto py-8 flex flex-col md:flex-row items-center gap-8"
-        >
-          <div class="w-full md:w-1/2">
-            <img
-              src="./images/girl-icon.png"
-              alt="Image"
-              class="rounded-tr-[70px] rounded-tl-sm rounded-br-sm rounded-bl-[70px] object-cover w-full h-auto"
-            />
-          </div>
-          <div
-            class="w-full md:w-1/2 h-[200px] md:h-[300px] justify-center overflow-y-auto scrollbar-hidden"
-          >
-            <div class="mb-4 justify-center">
-              <h2
-                class="text-2xl md:text-[40px] md:leading-tight mt-[50px] md:mt-[150px] font-bold text-center text-[#202024]"
-              >
-                Zamonaviy platforma <br />
-                ( Qiziqarli va qulay )
-              </h2>
-              <h2
-                class="text-2xl mt-[100px] md:mt-[200px] md:text-[40px] md:leading-tight text-center font-bold text-[#202024]"
-              >
-                Yodlash uchun eng muhum so'zlar ( 1500 dan ortiq )
-              </h2>
-              <h2
-                class="text-2xl mt-[100px] md:mt-[200px] md:text-[40px] md:leading-tight text-center font-bold text-[#202024]"
-              >
-                Mavzuga doir mashqlar ( 27 ta mashqlar)
-              </h2>
-              <h2
-                class="text-2xl mt-[100px] md:mt-[200px] md:text-[40px] md:leading-tight text-center font-bold text-[#202024]"
-              >
-                Shahsiy kabinet ( Login parol orqali)
-              </h2>
-              <h2
-                class="text-2xl mt-[100px] md:mt-[200px] md:mb-[100px] mb-[60px] md:leading-tight md:text-[40px] text-center font-bold text-[#202024]"
-              >
-                To'lliq vidio darsliklar ( 52 ta vidiolar)
-              </h2>
-            </div>
-          </div>
-        </div>
-
-        <div
-          id="form"
-          class="mt-[80px] text-center text-[#39cc46] text-[26px] sm:text-[36px] md:text-[44px] font-bold font-['Helvetica Neue'] leading-tight sm:leading-[52px] tracking-wide"
-        >
-          Rus tilini o‘rganish uchun <br />
-          ma’lumotlaringizni qoldiring
-        </div>
-        <div
-          class="w-full mx-auto bg-white rounded-[50px] p-4 sm:p-8 shadow-md mt-4 md:mt-10"
-        >
-          <form
-            class="space-y-6 px-2 md:px-[200px] xl:px-[305px] pt-2 md:pt-[60px] text-lg sm:text-xl"
-          >
-            <div>
-              <input
-                type="text"
-                placeholder="Ismingiz"
-                class="w-full px-6 py-4 sm:py-6 bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-green-500"
-              />
-            </div>
-            <div>
-              <input
-                type="tel"
-                placeholder="+998 (99) 999 99 99"
-                id="phone"
-                class="w-full px-6 py-4 sm:py-6 bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-green-500"
-              />
-            </div>
-            <div class="text-center">
-              <button
-                type="submit"
-                class="py-4 px-20 border-2 whitespace-nowrap border-green-600 bg-[#39cc46] text-white text-lg font-semibold rounded-full shadow-lg transition duration-200"
+              <a
+                href="#form"
+                class="inline-block mx-6 border-2 border-green-600 animate-bounce bg-[#39cc46] text-white md:text-[20px] sm:text-base text-sm font-semibold py-[23px] md:px-[116px] px-[54px] rounded-full shadow-lg transition"
               >
                 Kursga yozilish
+              </a>
+              <div
+                class="absolute right-0 top-1/2 transform w-[57px] h-[49px] md:w-[120px] md:h-[50px] -translate-y-1/2 translate-x-10 md:translate-x-full text-green-500"
+              >
+                <img src="./images/Right (2).svg" alt="" />
+              </div>
+            </div>
+
+            <p class="text-sm md:text-[20px] sm:text-[12px] text-gray-500 mt-4">
+              0 dan boshlab, Grammatika yetarli darajada bo'lmagan insonlar,
+              Muloqot qilishdagi muammosi borlar
+            </p>
+          </div>
+        </section>
+
+        <section class="px-0 w-full">
+          <div class="container mx-auto text-center py-6">
+            <div class="grid md:grid-cols-2 grid-cols-1 gap-5">
+              <div
+                class="Card md:h-[168px] h-[120px] relative bg-white rounded-tl-[5px] rounded-tr-[35px] rounded-bl-[35px] rounded-br-[5px] transition duration-300 ease-in-out hover:scale-[1.03]"
+              >
+                <div
+                  class="Frame1 right-[-20px] top-[-20px] absolute justify-end items-center gap-2.5"
+                >
+                  <div
+                    class="BoshlanishIcon md:w-[164px] md:h-[164px] w-[104px] h-[104px] relative origin-top-left rotate-[22deg] md:rotate-[15deg]"
+                  >
+                    <img src="./images/rascet.svg" alt="" />
+                  </div>
+                </div>
+                <div
+                  class="md:left-[35px] left-[25px] md:top-[104px] top-[72px] absolute text-[#202024] xl:text-xl text-[16px] font-medium font-['Helvetica Neue'] leading-normal"
+                >
+                  To‘lovdan so‘ng darhol darslar boshlanadi
+                </div>
+                <div
+                  class="Content md:left-[40px] left-[25px] md:top-[40px] top-[15px] absolute justify-start items-center gap-[15px] inline-flex"
+                >
+                  <div
+                    class="Icon p-2.5 bg-[#f1f3f6] rounded-[100px] justify-center items-center gap-2.5 flex"
+                  >
+                    <div class="BoshlanishIcon w-6 h-6 relative">
+                      <img src="./images/Boshlanish - icon.svg" alt="" />
+                    </div>
+                  </div>
+                  <div
+                    class="Boshlanish text-[#39cc46] text-[20px] md:text-[26px] font-bold font-['Helvetica Neue'] leading-loose"
+                  >
+                    Boshlanish
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="Card md:h-[168px] h-[120px] relative bg-white rounded-tr-[5px] rounded-tl-[35px] rounded-br-[35px] rounded-bl-[5px] transition duration-300 ease-in-out hover:scale-[1.03]"
+              >
+                <div
+                  class="Frame1 right-[-20px] top-[-16px] absolute justify-start items-center gap-2.5"
+                >
+                  <div
+                    class="BoshlanishIcon md:w-[164px] md:h-[164px] w-[104px] h-[104px] relative origin-top-left rotate-[22deg] md:rotate-[5deg]"
+                  >
+                    <img src="./images/NatijaKubok.svg" alt="" />
+                  </div>
+                </div>
+                <div
+                  class="md:left-[35px] left-[25px] md:top-[100px] text-start top-[72px] absolute text-[#202024] xl:text-xl text-[16px] font-medium font-['Helvetica Neue'] leading-normal"
+                >
+                  5500 dan ortiq insonlar biz bilan Rus Tilini o‘rganishgan
+                </div>
+                <div
+                  class="Content md:left-[40px] left-[25px] md:top-[40px] top-[15px] absolute justify-start items-center gap-[15px] inline-flex"
+                >
+                  <div
+                    class="Icon p-2.5 bg-[#f1f3f6] rounded-[100px] justify-center items-center gap-2.5 flex"
+                  >
+                    <div class="w-6 h-6 relative">
+                      <img src="./images/Natija - icon.svg" alt="" />
+                    </div>
+                  </div>
+                  <div
+                    class="Boshlanish text-[#39cc46] text-[26px] font-bold font-['Helvetica Neue'] leading-loose"
+                  >
+                    Natija
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="Card md:h-[168px] h-[120px] relative bg-white rounded-tl-[35px] rounded-tr-[5px] rounded-bl-[5px] rounded-br-[35px] transition duration-300 ease-in-out hover:scale-[1.03]"
+              >
+                <div
+                  class="Frame1 right-[-20px] top-[-16px] absolute justify-start items-center gap-2.5"
+                >
+                  <div
+                    class="DavomiyligiIcon md:w-[164px] md:h-[164px] w-[104px] h-[104px] relative origin-top-left rotate-[17deg] md:rotate-[8deg]"
+                  >
+                    <img src="./images/calendar.svg" alt="" />
+                  </div>
+                </div>
+                <div
+                  class="md:left-[35px] left-[25px] md:top-[104px] top-[72px] absolute text-[#202024] xl:text-xl text-[16px] font-medium font-['Helvetica Neue'] leading-normal"
+                >
+                  3 Oy
+                </div>
+                <div
+                  class="Content md:left-[40px] left-[25px] md:top-[40px] top-[15px] absolute justify-start items-center gap-[15px] inline-flex"
+                >
+                  <div
+                    class="Icon p-2.5 bg-[#f1f3f6] rounded-[100px] justify-center items-center gap-2.5 flex"
+                  >
+                    <div class="DavomiyligiIcon w-6 h-6 relative">
+                      <img src="./images/Davomiyligi - icon.svg" alt="" />
+                    </div>
+                  </div>
+                  <div
+                    class="Davomiyligi text-[#39cc46] text-[26px] font-bold font-['Helvetica Neue'] leading-loose"
+                  >
+                    Davomiyligi
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="Card md:h-[168px] h-[120px] relative bg-white rounded-tl-[5px] rounded-tr-[35px] rounded-bl-[35px] rounded-br-[5px] transition duration-300 ease-in-out hover:scale-[1.03]"
+              >
+                <div
+                  class="Frame1 right-[-20px] top-[-16px] absolute justify-start items-center gap-2.5"
+                >
+                  <div
+                    class="OQishTuriIcon md:w-[164px] md:h-[164px] w-[104px] h-[104px] relative origin-top-left rotate-[15deg] md:rotate-[8deg]"
+                  >
+                    <img src="./images/O'qish turi.svg" alt="" />
+                  </div>
+                </div>
+                <div
+                  class="md:left-[35px] left-[25px] md:top-[104px] top-[72px] absolute text-[#202024] xl:text-xl text-[16px] font-medium font-['Helvetica Neue'] leading-normal"
+                >
+                  Masofaviy (Online)
+                </div>
+                <div
+                  class="Content md:left-[40px] left-[25px] md:top-[40px] top-[15px] absolute justify-start items-center gap-[15px] inline-flex"
+                >
+                  <div
+                    class="Icon p-2.5 bg-[#f1f3f6] rounded-[100px] justify-center items-center gap-2.5 flex"
+                  >
+                    <div class="OQishTuriIcon w-6 h-6 relative">
+                      <img src="./images/O'qish turi - icon.svg" alt="" />
+                    </div>
+                  </div>
+                  <div
+                    class="OQishTuri text-[#39cc46] text-[26px] font-bold font-['Helvetica Neue'] leading-loose"
+                  >
+                    O'qish turi
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="PrepUzMaqsadi w-full bg-white rounded-[50px] mt-[70px] flex flex-col lg:flex-row justify-start items-center gap-4 xl:gap-[60px] p-4 md:pl-2.5 md:pr-14 md:py-2.5"
+            >
+              <div
+                class="Image flex justify-center md:justify-start items-center"
+              >
+                <img
+                  class="rounded-[50px] w-full md:w-[300px] lg:w-[480px] xl:w-[420px] h-auto"
+                  src="./images/premium_photo-1681681082335-f87e62a789fe-transformed 1.png"
+                  alt="Premium Photo"
+                />
+              </div>
+              <div
+                class="Text flex flex-col justify-center items-start gap-4 md:gap-[30px]"
+              >
+                <div
+                  class="text-[#39cc46] text-xl md:text-xl lg:text-2xl xl:text-4xl font-bold font-['Helvetica Neue'] md:text-left"
+                >
+                  Prep.uz onlayn ta’lim platformasining maqsadi
+                </div>
+                <div
+                  class="w-full text-[#202024] text-sm md:text-xl xl:text-3xl font-medium font-['Helvetica Neue'] leading-[28px] md:leading-[38px] md:text-left"
+                >
+                  “Siz rus tilini oson va bexavotir o‘rganishingiz uchun
+                  poydevor yaratish”
+                </div>
+              </div>
+            </div>
+
+            <div
+              id="siznikutmoqda"
+              class="SizniKutmoqda mt-[60px] text-center text-[#39cc46] text-3xl md:text-[44px] font-bold font-['Helvetica Neue'] leading-[52px] tracking-wide"
+            >
+              Sizni kutmoqda
+            </div>
+            <div
+              class="Accordion hidden w-full mt-[40px] h-[1000px] flex-col justify-start items-start lg:inline-flex"
+            >
+              <div
+                class="Cell self-stretch px-[50px] pb-[50px] pt-[50px] hover:pb-[120px] hover:bg-[#39cc46] ease-in-out hover:text-white bg-white rounded-tl-[35px] rounded-tr-[35px] border-b-2 border-[#f5f6f9] justify-start items-center gap-[30px] inline-flex lg:flex lg:flex-wrap relative overflow-hidden"
+              >
+                <div
+                  class="Icon p-[25px] bg-[#f1f3f6] rounded-[100px] justify-center items-center gap-2.5 flex"
+                >
+                  <div class="w-[50px] h-[50px] relative">
+                    <img src="./images/online user - icon.svg" alt="" />
+                  </div>
+                </div>
+                <div
+                  class="Text flex-col justify-start items-start gap-[30px] inline-flex relative"
+                >
+                  <div class="flex justify-between">
+                    <p
+                      class="OnlaynDars whitespace-nowrap md:text-3xl xl:text-4xl font-bold font-['Helvetica Neue'] leading-[44px]"
+                    >
+                      Onlayn dars
+                    </p>
+                    <div
+                      class="LinkIcon w-[50px] right-0 xl:ml-auto h-[50px] relative"
+                    >
+                      <a href="">
+                        <img src="./images/link - icon.svg" alt="" />
+                      </a>
+                    </div>
+                  </div>
+                  <p
+                    class="SlideText text-white break-words text-start h-[80px] w-[500px] xl:w-[700px] text-[20px] xl:text-[26px] font-medium font-['Helvetica Neue'] leading-loose absolute bottom-0 opacity-0 transition-all duration-300 transform translate-y-full"
+                  >
+                    Xohlagan joyda va vaqtda darsga kirish imkoniyati, 24/7
+                    o‘zingizga qulay bo‘lgan joyda rus tilini o‘rgana olasiz
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="Cell self-stretch px-[50px] py-[25px] hover:pb-[100px] hover:items-center hover:bg-[#39cc46] ease-in-out hover:text-white bg-white border-b-2 border-[#f5f6f9] justify-start items-center gap-[30px] inline-flex"
+              >
+                <div
+                  class="Icon p-[25px] bg-[#f1f3f6] rounded-[100px] justify-center items-center gap-2.5 flex"
+                >
+                  <div class="w-[50px] h-[50px] relative">
+                    <img src="./images/online cabinet - icon.svg" alt="" />
+                  </div>
+                </div>
+                <div
+                  class="Text flex-col justify-start items-start gap-[30px] flex relative"
+                >
+                  <div class="flex justify-between">
+                    <p
+                      class="OnlaynDars whitespace-nowrap md:text-3xl xl:text-4xl font-bold font-['Helvetica Neue'] leading-[44px]"
+                    >
+                      Qulay platforma va shaxsiy kabinet
+                    </p>
+                    <div class="LinkIcon w-[50px] h-[50px] relative">
+                      <a href="">
+                        <img src="./images/link - icon.svg" alt="" />
+                      </a>
+                    </div>
+                  </div>
+                  <p
+                    class="SlideText text-white break-words text-start h-[80px] w-[500px] xl:w-[700px] text-[20px] xl:text-[26px] font-medium font-['Helvetica Neue'] leading-loose absolute bottom-0 opacity-0 transition-all duration-300 transform translate-y-full"
+                  >
+                    Barcha darslar, mashqlar, yodlash uchun so'zlar, testlar,
+                    har bir o'quvchi uchun alohida taqdim etiladi
+                  </p>
+                </div>
+              </div>
+              <div
+                class="Cell self-stretch px-[50px] py-[25px] bg-white hover:pb-[100px] hover:bg-[#39cc46] ease-in-out hover:text-white border-b-2 border-[#f5f6f9] justify-start items-center gap-[30px] inline-flex"
+              >
+                <div
+                  class="Icon p-[25px] bg-[#f1f3f6] rounded-[100px] justify-center items-center gap-2.5 flex"
+                >
+                  <div class="KnowledgeIcon w-[50px] h-[50px] relative">
+                    <img src="./images/knowledge - icon.svg" alt="" />
+                  </div>
+                </div>
+                <div
+                  class="Text flex-col justify-start items-start gap-[30px] inline-flex relative"
+                >
+                  <div class="flex justify-between">
+                    <p
+                      class="OnlaynDars whitespace-nowrap md:text-3xl xl:text-4xl font-bold font-['Helvetica Neue'] leading-[44px]"
+                    >
+                      Maxsus o‘qitish
+                    </p>
+                    <div class="LinkIcon w-[50px] h-[50px] relative">
+                      <a href="">
+                        <img src="./images/link - icon.svg" alt="" />
+                      </a>
+                    </div>
+                  </div>
+                  <p
+                    class="SlideText text-white break-words text-start h-[80px] w-[500px] xl:w-[700px] text-[20px] xl:text-[26px] font-medium font-['Helvetica Neue'] leading-loose absolute bottom-0 opacity-0 transition-all duration-300 transform translate-y-full"
+                  >
+                    Darslarni boshlashdan oldin maxsus reja taqdim etiladi va
+                    o'z majburiyatlaringiz bilan tanishtiriladi
+                  </p>
+                </div>
+              </div>
+              <div
+                class="Cell self-stretch px-[50px] py-[25px] hover:pb-[100px] hover:bg-[#39cc46] ease-in-out hover:text-white bg-white border-b-2 border-[#f5f6f9] justify-start items-center gap-[30px] inline-flex"
+              >
+                <div
+                  class="Icon p-[25px] bg-[#f1f3f6] rounded-[100px] justify-center items-center gap-2.5 flex"
+                >
+                  <div class="MentorIcon w-[50px] h-[50px] relative">
+                    <img src="./images/mentor - icon.svg" alt="" />
+                  </div>
+                </div>
+                <div
+                  class="Text flex-col justify-start items-start gap-[30px] inline-flex relative"
+                >
+                  <div class="flex justify-between">
+                    <p
+                      class="OnlaynDars md:text-3xl xl:text-4xl font-bold font-['Helvetica Neue'] leading-[44px]"
+                    >
+                      Mentor
+                    </p>
+                    <div class="LinkIcon w-[50px] h-[50px] relative">
+                      <a href="">
+                        <img src="./images/link - icon.svg" alt="" />
+                      </a>
+                    </div>
+                  </div>
+                  <p
+                    class="SlideText text-white break-words text-start h-[80px] w-[500px] xl:w-[700px] text-[20px] xl:text-[26px] font-medium font-['Helvetica Neue'] leading-loose absolute bottom-0 opacity-0 transition-all duration-300 transform translate-y-full"
+                  >
+                    Har hafta 2 marotaba 30 daqiqadan mentor bilan onlayn suhbat
+                    bo'lib o'tadi
+                  </p>
+                </div>
+              </div>
+              <div
+                class="Cell self-stretch px-[50px] py-[25px] hover:pb-[100px] hover:bg-[#39cc46] ease-in-out hover:text-white bg-white border-b-2 border-[#f5f6f9] justify-start items-center gap-[30px] inline-flex"
+              >
+                <div
+                  class="Icon p-[25px] bg-[#f1f3f6] rounded-[100px] justify-center items-center gap-2.5 flex"
+                >
+                  <div class="DiplomaIcon w-[50px] h-[50px] relative">
+                    <img src="./images/diploma - icon.svg" alt="" />
+                  </div>
+                </div>
+                <div
+                  class="Text flex-col justify-start items-start gap-[30px] inline-flex relative"
+                >
+                  <div class="flex justify-between">
+                    <p
+                      class="OnlaynDars md:text-3xl xl:text-4xl font-bold font-['Helvetica Neue'] leading-[44px]"
+                    >
+                      Sertifikat
+                    </p>
+                    <div class="LinkIcon w-[50px] h-[50px] relative">
+                      <a href="">
+                        <img src="./images/link - icon.svg" alt="" />
+                      </a>
+                    </div>
+                  </div>
+                  <p
+                    class="SlideText text-white break-words text-start h-[80px] w-[500px] xl:w-[700px] text-[20px] xl:text-[26px] font-medium font-['Helvetica Neue'] leading-loose absolute bottom-0 opacity-0 transition-all duration-300 transform translate-y-full"
+                  >
+                    Siz bizning maxsus Rus tili kursimizni muvaffaqiyatli
+                    bitirganligingizhaqida sertifikat taqdim etiladi
+                  </p>
+                </div>
+              </div>
+              <div
+                class="Cell self-stretch px-[50px] py-[25px] hover:pb-[100px] hover:bg-[#39cc46] ease-in-out hover:text-white bg-white rounded-bl-[35px] rounded-br-[35px] justify-start items-center gap-[30px] inline-flex"
+              >
+                <div
+                  class="Icon p-[25px] bg-[#f1f3f6] rounded-[100px] justify-center items-center gap-2.5 flex"
+                >
+                  <div class="MentorHelpIcon w-[50px] h-[50px] relative">
+                    <img src="./images/mentor-help - icon.svg" alt="" />
+                  </div>
+                </div>
+                <div
+                  class="Text flex-col justify-start items-start gap-[30px] inline-flex relative"
+                >
+                  <div class="flex justify-between">
+                    <p
+                      class="OnlaynDars whitespace-nowrap md:text-3xl xl:text-4xl font-bold font-['Helvetica Neue'] leading-[44px]"
+                    >
+                      O'zaro yordam
+                    </p>
+                    <div class="LinkIcon w-[50px] h-[50px] relative">
+                      <a href="">
+                        <img src="./images/link - icon.svg" alt="" />
+                      </a>
+                    </div>
+                  </div>
+                  <p
+                    class="SlideText text-white break-words text-start h-[80px] w-[500px] xl:w-[700px] text-[20px] xl:text-[26px] font-medium font-['Helvetica Neue'] leading-normal absolute bottom-0 opacity-0 transition-all duration-300 transform translate-y-full"
+                  >
+                    Har bir talaba kurs davomida yopiq telegramguruhda qo'llab
+                    quvvatlanadi Umumiy savol javob va foydali ma'lumotlar berib
+                    boriladi
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              id="scrollContainer"
+              class="flex lg:hidden overflow-x-auto scrollbar-hidden gap-[20px] mt-[30px]"
+            >
+              <div
+                class="Card min-w-[237px] h-[284px] relative bg-white rounded-[25px]"
+              >
+                <div
+                  class="Icon p-[15px] left-[25px] top-[25px] absolute bg-[#f1f3f6] rounded-[100px] justify-center items-center gap-2.5 inline-flex"
+                >
+                  <div class="OnlineUserIcon w-[30px] h-[30px] relative">
+                    <img src="./images/online user - icon.svg" alt="" />
+                  </div>
+                </div>
+                <div
+                  class="Text left-[15px] top-[100px] absolute flex-col justify-start items-start gap-[15px] inline-flex"
+                >
+                  <div
+                    class="OnlaynDars text-black text-xl font-bold font-['Helvetica Neue'] leading-normal"
+                  >
+                    Onlayn dars
+                  </div>
+                  <div
+                    class="text-start text-[#202024] text-sm font-bold font-['Helvetica Neue'] leading-tight tracking-tight"
+                  >
+                    Xohlagan joyda va vaqtda darsga kirish imkoniyati, 24/7
+                    o‘zingizga qulay bo‘lgan joyda <br />
+                    uyda, ko‘chada, kafeda, tog’da va choyxonada ham rus tilini
+                    o‘rgana olasiz
+                  </div>
+                </div>
+              </div>
+              <div
+                class="Card min-w-[237px] h-[284px] relative bg-white rounded-[25px]"
+              >
+                <div
+                  class="Icon p-[15px] left-[25px] top-[25px] absolute bg-[#f1f3f6] rounded-[100px] justify-center items-center gap-2.5 inline-flex"
+                >
+                  <div class="OnlineUserIcon w-[30px] h-[30px] relative">
+                    <img src="./images/online cabinet - icon.svg" alt="" />
+                  </div>
+                </div>
+                <div
+                  class="Text left-[15px] top-[100px] absolute flex-col justify-start items-start gap-[15px] inline-flex"
+                >
+                  <div
+                    class="OnlaynDars text-black text-start text-xl font-bold font-['Helvetica Neue'] leading-normal"
+                  >
+                    Qulay platforma va shaxsiy kabinet
+                  </div>
+                  <div
+                    class="w-[207px] text-[#202024] text-sm text-start font-bold font-['Helvetica Neue'] leading-tight tracking-tight"
+                  >
+                    Barcha darslar, mashqlar, yodlash uchun so'zlar, testlar,
+                    har bir o'quvchi uchun alohida taqdim etiladi
+                  </div>
+                </div>
+              </div>
+              <div
+                class="Card min-w-[237px] h-[284px] relative bg-white rounded-[25px]"
+              >
+                <div
+                  class="Icon p-[15px] left-[25px] top-[25px] absolute bg-[#f1f3f6] rounded-[100px] justify-center items-center gap-2.5 inline-flex"
+                >
+                  <div class="OnlineUserIcon w-[30px] h-[30px] relative">
+                    <img src="./images/knowledge - icon.svg" alt="" />
+                  </div>
+                </div>
+                <div
+                  class="Text left-[15px] top-[100px] absolute flex-col justify-start items-start gap-[15px] inline-flex"
+                >
+                  <div
+                    class="OnlaynDars text-black text-xl font-bold font-['Helvetica Neue'] leading-normal"
+                  >
+                    Maxsus o‘qitish
+                  </div>
+                  <div
+                    class="w-[207px] text-start text-[#202024] text-sm font-bold font-['Helvetica Neue'] leading-tight tracking-tight"
+                  >
+                    Darslarni boshlashdan oldin maxsus reja taqdim etiladi va
+                    o'z majburiyatlaringiz bilan tanishtiriladi
+                  </div>
+                </div>
+              </div>
+              <div
+                class="Card min-w-[237px] h-[284px] relative bg-white rounded-[25px]"
+              >
+                <div
+                  class="Icon p-[15px] left-[25px] top-[25px] absolute bg-[#f1f3f6] rounded-[100px] justify-center items-center gap-2.5 inline-flex"
+                >
+                  <div class="OnlineUserIcon w-[30px] h-[30px] relative">
+                    <img src="./images/mentor - icon.svg" alt="" />
+                  </div>
+                </div>
+                <div
+                  class="Text left-[15px] top-[100px] absolute flex-col justify-start items-start gap-[15px] inline-flex"
+                >
+                  <div
+                    class="OnlaynDars text-black text-xl font-bold font-['Helvetica Neue'] leading-normal"
+                  >
+                    Mentor
+                  </div>
+                  <div
+                    class="w-[207px] text-start text-[#202024] text-sm font-bold font-['Helvetica Neue'] leading-tight tracking-tight"
+                  >
+                    Har hafta 2 marotaba 30 daqiqadan mentor bilan onlayn suhbat
+                    bo'lib o'tadi
+                  </div>
+                </div>
+              </div>
+              <div
+                class="Card min-w-[237px] h-[284px] relative bg-white rounded-[25px]"
+              >
+                <div
+                  class="Icon p-[15px] left-[25px] top-[25px] absolute bg-[#f1f3f6] rounded-[100px] justify-center items-center gap-2.5 inline-flex"
+                >
+                  <div class="OnlineUserIcon w-[30px] h-[30px] relative">
+                    <img src="./images/diploma - icon.svg" alt="" />
+                  </div>
+                </div>
+                <div
+                  class="Text left-[15px] top-[100px] absolute flex-col justify-start items-start gap-[15px] inline-flex"
+                >
+                  <div
+                    class="OnlaynDars text-black text-xl font-bold font-['Helvetica Neue'] leading-normal"
+                  >
+                    Sertifikat
+                  </div>
+                  <div
+                    class="w-[207px] text-[#202024] text-start text-sm font-bold font-['Helvetica Neue'] leading-tight tracking-tight"
+                  >
+                    Siz bizning maxsus Rus tili kursimizni muvaffaqiyatli
+                    bitirganligingizhaqida sertifikat taqdim etiladi
+                  </div>
+                </div>
+              </div>
+              <div
+                class="Card min-w-[237px] h-[284px] relative bg-white rounded-[25px]"
+              >
+                <div
+                  class="Icon p-[15px] left-[25px] top-[25px] absolute bg-[#f1f3f6] rounded-[100px] justify-center items-center gap-2.5 inline-flex"
+                >
+                  <div class="OnlineUserIcon w-[30px] h-[30px] relative">
+                    <img src="./images/mentor-help - icon.svg" alt="" />
+                  </div>
+                </div>
+                <div
+                  class="Text left-[15px] top-[100px] absolute flex-col justify-start items-start gap-[15px] inline-flex"
+                >
+                  <div
+                    class="OnlaynDars text-black text-xl font-bold font-['Helvetica Neue'] leading-normal"
+                  >
+                    O'zaro yordam
+                  </div>
+                  <div
+                    class="w-[207px] text-[#202024] text-start text-sm font-bold font-['Helvetica Neue'] leading-tight tracking-tight"
+                  >
+                    Har bir talaba kurs davomida yopiq telegramguruhda qo'llab
+                    quvvatlanadi Umumiy savol javob va foydali ma'lumotlar berib
+                    boriladi
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative lg:hidden gap-[30px] mt-[20px]">
+              <button
+                id="backButton"
+                class="Back h-11 p-2.5 bg-white rounded-[100px] justify-center items-center gap-2.5 inline-flex"
+              >
+                <div class="LeftIcon w-6 h-6 relative">
+                  <img src="./images/left - icon.svg" alt="" />
+                </div>
+              </button>
+              <button
+                class="Next h-11 p-2.5 bg-[#39cc46] rounded-[100px] justify-center items-center gap-2.5 inline-flex"
+              >
+                <div class="RightIcon w-6 h-6 relative">
+                  <img src="./images/right - icon.svg" alt="" />
+                </div>
               </button>
             </div>
-          </form>
-          <p class="text-center text-sm text-gray-500 mt-4">
-            Ma'lumotlaringiz qoldirish uchun, sizda
-            <span id="countdown" class="text-red-500">03:00</span> qoldi
-          </p>
+            <div class="relative inline-block mt-8">
+              <div
+                class="absolute left-0 top-1/2 transform w-[57px] h-[49px] md:w-[120px] md:h-[50px] -translate-y-1/2 md:-translate-x-full -translate-x-10 text-green-500"
+              >
+                <img src="./images/Left (1).svg" alt="" />
+              </div>
+              <a
+                href="#form"
+                class="inline-block mx-6 border-2 border-green-600 animate-bounce bg-[#39cc46] text-white md:text-[20px] sm:text-base text-sm font-semibold py-[23px] md:px-[116px] px-[54px] rounded-full shadow-lg transition"
+              >
+                Kursga yozilish
+              </a>
+              <div
+                class="absolute right-0 top-1/2 transform w-[57px] h-[49px] md:w-[120px] md:h-[50px] -translate-y-1/2 translate-x-10 md:translate-x-full text-green-500"
+              >
+                <img src="./images/Right (2).svg" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="result"
+            class="mt-20 text-center text-[#39cc46] text-3xl md:text-[44px] font-bold font-['Helvetica Neue'] leading-[52px] tracking-wide"
+          >
+            Rus tili - ajoyib<br />Ammo kursni tugatib siz nimalarga erisha
+            olasiz
+          </div>
+        </section>
+      </div>
+      <div class="mt-20">
+        <div
+          id="slider"
+          class="md:flex hidden slider overflow-hidden flex-wrap md:overflow-x-auto md:flex-nowrap scrollbar-hidden gap-5"
+        >
+          <div
+            class="Card1 first-card lg:p-10 md:p-6 p-4 bg-white rounded-tl-[5px] rounded-tr-[35px] rounded-bl-[35px] rounded-br-[5px] flex-col items-start gap-[25px] inline-flex"
+          >
+            <div
+              class="Icon w-[50px] h-[50px] relative flex-col justify-start items-start flex"
+            >
+              <img src="./images/icon-77.svg" alt="" />
+            </div>
+            <div
+              class="md:w-[408px] w-full leading-tight text-[#202024] text-base md:text-[22px] lg:text-[26px] font-medium font-['Helvetica Neue']"
+            >
+              Rus tilida siz istagan universitetda, kollejda o‘qish imkoniyati.
+              Rossiya OTMlariga kirish imkoniyati mavjudligi
+            </div>
+          </div>
+
+          <div
+            class="Card1 md:p-10 p-4 bg-white rounded-tl-[5px] rounded-tr-[35px] rounded-bl-[35px] rounded-br-[5px] flex-col items-start gap-[25px] inline-flex"
+          >
+            <div
+              class="Icon w-[50px] h-[50px] relative flex-col justify-start items-start flex"
+            >
+              <img src="./images/audio.svg" alt="" />
+            </div>
+            <div
+              class="md:w-[408px] w-full leading-tight text-[#202024] text-base md:text-[22px] lg:text-[26px] font-medium font-['Helvetica Neue']"
+            >
+              Rus tilida siz istagan universitetda, kollejda o‘qish imkoniyati.
+              Rossiya OTMlariga kirish imkoniyati mavjudligi
+            </div>
+          </div>
+
+          <div
+            class="Card1 md:p-10 p-4 bg-white rounded-tl-[5px] rounded-tr-[35px] rounded-bl-[35px] rounded-br-[5px] flex-col items-start gap-[25px] inline-flex"
+          >
+            <div
+              class="Icon w-[50px] h-[50px] relative flex-col justify-start items-start flex"
+            >
+              <img src="./images/bag.svg" alt="" />
+            </div>
+            <div
+              class="md:w-[408px] w-full leading-tight text-[#202024] text-base md:text-[22px] lg:text-[26px] font-medium font-['Helvetica Neue']"
+            >
+              Rus tilida siz istagan universitetda, kollejda o‘qish imkoniyati.
+              Rossiya OTMlariga kirish imkoniyati mavjudligi
+            </div>
+          </div>
+
+          <div
+            class="Card1 last-card md:p-10 p-4 bg-white rounded-tl-[5px] rounded-tr-[35px] rounded-bl-[35px] rounded-br-[5px] flex-col items-start gap-[25px] inline-flex"
+          >
+            <div
+              class="Icon w-[50px] h-[50px] relative flex-col justify-start items-start flex"
+            >
+              <img src="./images/Icon (34).svg" alt="" />
+            </div>
+            <div
+              class="md:w-[408px] w-full leading-tight text-[#202024] text-base md:text-[22px] lg:text-[26px] font-medium font-['Helvetica Neue']"
+            >
+              Rus tilida siz istagan universitetda, kollejda o‘qish imkoniyati.
+              Rossiya OTMlariga kirish imkoniyati mavjudligi
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex md:hidden overflow-hidden flex-wrap md:overflow-x-auto md:flex-nowrap scrollbar-hidden gap-5"
+        >
+          <div
+            class="Card1 first-card lg:p-10 md:p-6 p-4 bg-white rounded-tl-[5px] rounded-tr-[35px] rounded-bl-[35px] rounded-br-[5px] flex-col items-start gap-[25px] inline-flex"
+          >
+            <div
+              class="Icon w-[50px] h-[50px] relative flex-col justify-start items-start flex"
+            >
+              <img src="./images/icon-77.svg" alt="" />
+            </div>
+            <div
+              class="md:w-[408px] w-full leading-tight text-[#202024] text-base md:text-[22px] lg:text-[26px] font-medium font-['Helvetica Neue']"
+            >
+              Rus tilida siz istagan universitetda, kollejda o‘qish imkoniyati.
+              Rossiya OTMlariga kirish imkoniyati mavjudligi
+            </div>
+          </div>
+
+          <div
+            class="Card1 md:p-10 p-4 bg-white rounded-tl-[5px] rounded-tr-[35px] rounded-bl-[35px] rounded-br-[5px] flex-col items-start gap-[25px] inline-flex"
+          >
+            <div
+              class="Icon w-[50px] h-[50px] relative flex-col justify-start items-start flex"
+            >
+              <img src="./images/audio.svg" alt="" />
+            </div>
+            <div
+              class="md:w-[408px] w-full leading-tight text-[#202024] text-base md:text-[22px] lg:text-[26px] font-medium font-['Helvetica Neue']"
+            >
+              Rus tilida siz istagan universitetda, kollejda o‘qish imkoniyati.
+              Rossiya OTMlariga kirish imkoniyati mavjudligi
+            </div>
+          </div>
+
+          <div
+            class="Card1 md:p-10 p-4 bg-white rounded-tl-[5px] rounded-tr-[35px] rounded-bl-[35px] rounded-br-[5px] flex-col items-start gap-[25px] inline-flex"
+          >
+            <div
+              class="Icon w-[50px] h-[50px] relative flex-col justify-start items-start flex"
+            >
+              <img src="./images/bag.svg" alt="" />
+            </div>
+            <div
+              class="md:w-[408px] w-full leading-tight text-[#202024] text-base md:text-[22px] lg:text-[26px] font-medium font-['Helvetica Neue']"
+            >
+              Rus tilida siz istagan universitetda, kollejda o‘qish imkoniyati.
+              Rossiya OTMlariga kirish imkoniyati mavjudligi
+            </div>
+          </div>
+
+          <div
+            class="Card1 last-card md:p-10 p-4 bg-white rounded-tl-[5px] rounded-tr-[35px] rounded-bl-[35px] rounded-br-[5px] flex-col items-start gap-[25px] inline-flex"
+          >
+            <div
+              class="Icon w-[50px] h-[50px] relative flex-col justify-start items-start flex"
+            >
+              <img src="./images/Icon (34).svg" alt="" />
+            </div>
+            <div
+              class="md:w-[408px] w-full leading-tight text-[#202024] text-base md:text-[22px] lg:text-[26px] font-medium font-['Helvetica Neue']"
+            >
+              Rus tilida siz istagan universitetda, kollejda o‘qish imkoniyati.
+              Rossiya OTMlariga kirish imkoniyati mavjudligi
+            </div>
+          </div>
         </div>
       </div>
-    </section>
 
-    <footer class="bg-white pt-10 mt-10">
-      <div
-        class="container mx-auto flex flex-col lg:px-[130px] justify-center items-center"
-      >
-        <img src="./images/LOGOTYPE.svg" alt="Logo" class="w-36 mb-4" />
+      <div class="lg:px-[120px] px-1">
+        <section class="container mx-auto text-center py-6">
+          <div
+            id="mamnun"
+            class="mt-20 text-center leading-tight text-[#39cc46] text-2xl md:text-[44px] font-bold font-['Helvetica Neue'] tracking-wide"
+          >
+            Kursimiz haqida o‘quvchilarimiz fikrini <br />
+            bilishni istaysizmi?
+          </div>
+        </section>
       </div>
-      <div
-        class="container mx-auto flex xl:px-[120px] flex-col md:flex-row justify-between"
-      >
-        <div class="flex flex-col items-center lg:items-start mb-6 lg:mb-0">
-          <div class="text-gray-800 text-center lg:text-left">
-            <p class="text-lg mb-2">Ommaviy Oferta</p>
-            <p class="text-lg mb-2">
-              Shaxsiy ma'lumotlarni qayta ishlashga rozilik
+      <section class="carousel_main">
+        <div class="relative w-full">
+          <div class="owl-carousel owl-theme">
+            <div class="item">
+              <div
+                class="relative md:w-[590px] md:h-[254px] w-[341px] h-[198px] bg-white rounded-[35px] p-6 sm:p-8 overflow-hidden"
+              >
+                <div
+                  class="absolute w-[200px] h-[200px] bg-green-600 rounded-full blur-[150px] -top-[50px] -left-[50px]"
+                ></div>
+                <div
+                  class="absolute w-[300px] h-[300px] bg-yellow-300 rounded-full blur-[150px] top-[100px] left-[300px] lg:left-[350px]"
+                ></div>
+
+                <div class="relative z-10">
+                  <h3
+                    class="text-[#202024] text-[20px] sm:text-[26px] font-medium mb-2"
+                  >
+                    Jamila Eshonqulova
+                  </h3>
+                  <p class="text-[#202024]/50 text-sm sm:text-base mb-4">
+                    21.05.2024
+                  </p>
+                  <p class="text-[#202024]/50 text-sm md:text-lg">
+                    O‘qishdan bo‘sh vaqtlarimda Prep.uz platformasidan Rus
+                    tilini o‘rganvomman. 2 oy bo‘ldi uje natijasi zo‘r, barchaga
+                    tavsiya qilaman.
+                  </p>
+                </div>
+                <div
+                  class="absolute top-6 sm:top-8 right-6 sm:right-8 w-6 sm:w-8 h-6 sm:h-8"
+                >
+                  <img src="./images/tire-icon.svg" alt="Quote Icon" />
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div
+                class="relative md:w-[590px] md:h-[254px] w-[341px] h-[198px] bg-white rounded-[35px] p-6 sm:p-8 overflow-hidden"
+              >
+                <div
+                  class="absolute w-[200px] h-[200px] bg-green-600 rounded-full blur-[150px] -top-[50px] -left-[50px]"
+                ></div>
+                <div
+                  class="absolute w-[300px] h-[300px] bg-yellow-300 rounded-full blur-[150px] top-[100px] left-[300px] lg:left-[350px]"
+                ></div>
+
+                <div class="relative z-10">
+                  <h3
+                    class="text-[#202024] text-[20px] sm:text-[26px] font-medium mb-2"
+                  >
+                    Jamila Eshonqulova
+                  </h3>
+                  <p class="text-[#202024]/50 text-sm sm:text-base mb-4">
+                    21.05.2024
+                  </p>
+                  <p class="text-[#202024]/50 text-sm md:text-lg">
+                    O‘qishdan bo‘sh vaqtlarimda Prep.uz platformasidan Rus
+                    tilini o‘rganvomman. 2 oy bo‘ldi uje natijasi zo‘r, barchaga
+                    tavsiya qilaman.
+                  </p>
+                </div>
+                <div
+                  class="absolute top-6 sm:top-8 right-6 sm:right-8 w-6 sm:w-8 h-6 sm:h-8"
+                >
+                  <img src="./images/tire-icon.svg" alt="Quote Icon" />
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div
+                class="relative md:w-[590px] md:h-[254px] w-[341px] h-[198px] bg-white rounded-[35px] p-6 sm:p-8 overflow-hidden"
+              >
+                <div
+                  class="absolute w-[200px] h-[200px] bg-green-600 rounded-full blur-[150px] -top-[50px] -left-[50px]"
+                ></div>
+                <div
+                  class="absolute w-[300px] h-[300px] bg-yellow-300 rounded-full blur-[150px] top-[100px] left-[300px] lg:left-[350px]"
+                ></div>
+
+                <div class="relative z-10">
+                  <h3
+                    class="text-[#202024] text-[20px] sm:text-[26px] font-medium mb-2"
+                  >
+                    Jamila Eshonqulova
+                  </h3>
+                  <p class="text-[#202024]/50 text-sm sm:text-base mb-4">
+                    21.05.2024
+                  </p>
+                  <p class="text-[#202024]/50 text-sm md:text-lg">
+                    O‘qishdan bo‘sh vaqtlarimda Prep.uz platformasidan Rus
+                    tilini o‘rganvomman. 2 oy bo‘ldi uje natijasi zo‘r, barchaga
+                    tavsiya qilaman.
+                  </p>
+                </div>
+                <div
+                  class="absolute top-6 sm:top-8 right-6 sm:right-8 w-6 sm:w-8 h-6 sm:h-8"
+                >
+                  <img src="./images/tire-icon.svg" alt="Quote Icon" />
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div
+                class="relative md:w-[590px] md:h-[254px] w-[341px] h-[198px] bg-white rounded-[35px] p-6 sm:p-8 overflow-hidden"
+              >
+                <div
+                  class="absolute w-[200px] h-[200px] bg-green-600 rounded-full blur-[150px] -top-[50px] -left-[50px]"
+                ></div>
+                <div
+                  class="absolute w-[300px] h-[300px] bg-yellow-300 rounded-full blur-[150px] top-[100px] left-[300px] lg:left-[350px]"
+                ></div>
+
+                <div class="relative z-10">
+                  <h3
+                    class="text-[#202024] text-[20px] sm:text-[26px] font-medium mb-2"
+                  >
+                    Jamila Eshonqulova
+                  </h3>
+                  <p class="text-[#202024]/50 text-sm sm:text-base mb-4">
+                    21.05.2024
+                  </p>
+                  <p class="text-[#202024]/50 text-sm md:text-lg">
+                    O‘qishdan bo‘sh vaqtlarimda Prep.uz platformasidan Rus
+                    tilini o‘rganvomman. 2 oy bo‘ldi uje natijasi zo‘r, barchaga
+                    tavsiya qilaman.
+                  </p>
+                </div>
+                <div
+                  class="absolute top-6 sm:top-8 right-6 sm:right-8 w-6 sm:w-8 h-6 sm:h-8"
+                >
+                  <img src="./images/tire-icon.svg" alt="Quote Icon" />
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div
+                class="relative md:w-[590px] md:h-[254px] w-[341px] h-[198px] bg-white rounded-[35px] p-6 sm:p-8 overflow-hidden"
+              >
+                <div
+                  class="absolute w-[200px] h-[200px] bg-green-600 rounded-full blur-[150px] -top-[50px] -left-[50px]"
+                ></div>
+                <div
+                  class="absolute w-[300px] h-[300px] bg-yellow-600 rounded-full blur-[150px] top-[100px] left-[300px] lg:left-[350px]"
+                ></div>
+
+                <div class="relative z-10">
+                  <h3
+                    class="text-[#202024] text-[20px] sm:text-[26px] font-medium mb-2"
+                  >
+                    Jamila Eshonqulova
+                  </h3>
+                  <p class="text-[#202024]/50 text-sm sm:text-base mb-4">
+                    21.05.2024
+                  </p>
+                  <p class="text-[#202024]/50 text-sm md:text-lg">
+                    O‘qishdan bo‘sh vaqtlarimda Prep.uz platformasidan Rus
+                    tilini o‘rganvomman. 2 oy bo‘ldi uje natijasi zo‘r, barchaga
+                    tavsiya qilaman.
+                  </p>
+                </div>
+                <div
+                  class="absolute top-6 sm:top-8 right-6 sm:right-8 w-6 sm:w-8 h-6 sm:h-8"
+                >
+                  <img src="./images/tire-icon.svg" alt="Quote Icon" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-center mt-[40px] space-x-4">
+            <button
+              id="prevButton"
+              class="text-gray-400 hover:text-gray-600 focus:outline-none"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+
+            <div
+              class="relative w-[184px] h-[18px] rounded-full px-2 bg-white shadow-inner"
+            >
+              <div
+                class="absolute left-0 top-0 h-[14px] bg-green-500 rounded-full"
+                style="width: 10%"
+                id="progressBar"
+              ></div>
+              <span
+                class="absolute inset-0 flex items-center mt-[-45px] justify-center text-black text-[24px]"
+              >
+                <span id="pageInfo">1/5</span>
+              </span>
+            </div>
+
+            <button
+              id="nextButton"
+              class="text-gray-600 hover:text-gray-800 focus:outline-none"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="lg:px-[120px] px-4 sm:px-2">
+        <div class="container mx-auto py-6">
+          <div
+            class="flex flex-col lg:flex-row gap-8 lg:gap-[50px] mt-[50px] items-center justify-between"
+          >
+            <div class="w-full lg:w-auto">
+              <img
+                class="w-full sm:w-[350px] lg:w-[650px] h-auto rounded-tr-3xl rounded-bl-3xl"
+                src="./images/male-icon.png"
+              />
+            </div>
+            <div>
+              <div
+                class="text-[#39cc46] text-[32px] md:text-[44px] font-bold font-['Helvetica Neue'] leading-tight sm:leading-[52px] tracking-wide"
+              >
+                Lola Polatova
+              </div>
+              <div
+                class="mt-4 text-[#202024] text-[18px] md:text-[26px] font-medium font-['Helvetica Neue'] max-w-full lg:max-w-[700px]"
+              >
+                Rus tili - eng qadimiy tillardan biri bo‘lib, bugungi kunda
+                ko‘pgina mamlakatlarning asosiy tili hisoblanadi. Bu til boy
+                tarixga va madaniy merosga ega bo‘lib, dunyodagi eng ko‘p
+                qo‘llaniladigan tillardan biri.
+              </div>
+              <div
+                class="mt-[32px] p-4 sm:p-[30px] bg-white rounded-tl-[5px] rounded-tr-[35px] rounded-bl-[35px] rounded-br-[5px] border-2 border-[#39cc46] inline-flex"
+              >
+                <div
+                  class="text-[#202024] text-[18px] md:text-[26px] font-normal font-['Helvetica Neue'] md:leading-loose"
+                >
+                  Rus tili kursimizni O`zbekistondagi 25 yillik tajribaga ega
+                  pedagog Lola Polatova tomonidan taqdim etiladi.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="mt-[80px] text-center text-[#39cc46] text-[32px] sm:text-[36px] md:text-[44px] font-bold font-['Helvetica Neue'] leading-tight sm:leading-[52px] tracking-wide"
+          >
+            Kursimizdagi mavjud tariflar
+          </div>
+          <div
+            class="container mx-auto py-8 flex flex-col md:flex-row items-center gap-8"
+          >
+            <div class="w-full md:w-1/2">
+              <img
+                src="./images/girl-icon.png"
+                alt="Image"
+                class="rounded-tr-[70px] rounded-tl-sm rounded-br-sm rounded-bl-[70px] object-cover w-full h-auto"
+              />
+            </div>
+            <div
+              class="w-full md:w-1/2 h-[200px] md:h-[300px] justify-center overflow-y-auto scrollbar-hidden"
+            >
+              <div class="mb-4 justify-center">
+                <h2
+                  class="text-2xl md:text-[40px] md:leading-tight mt-[50px] md:mt-[150px] font-bold text-center text-[#202024]"
+                >
+                  Zamonaviy platforma <br />
+                  ( Qiziqarli va qulay )
+                </h2>
+                <h2
+                  class="text-2xl mt-[100px] md:mt-[200px] md:text-[40px] md:leading-tight text-center font-bold text-[#202024]"
+                >
+                  Yodlash uchun eng muhum so'zlar ( 1500 dan ortiq )
+                </h2>
+                <h2
+                  class="text-2xl mt-[100px] md:mt-[200px] md:text-[40px] md:leading-tight text-center font-bold text-[#202024]"
+                >
+                  Mavzuga doir mashqlar ( 27 ta mashqlar)
+                </h2>
+                <h2
+                  class="text-2xl mt-[100px] md:mt-[200px] md:text-[40px] md:leading-tight text-center font-bold text-[#202024]"
+                >
+                  Shahsiy kabinet ( Login parol orqali)
+                </h2>
+                <h2
+                  class="text-2xl mt-[100px] md:mt-[200px] md:mb-[100px] mb-[60px] md:leading-tight md:text-[40px] text-center font-bold text-[#202024]"
+                >
+                  To'lliq vidio darsliklar ( 52 ta vidiolar)
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="form"
+            class="mt-[80px] text-center text-[#39cc46] text-[26px] sm:text-[36px] md:text-[44px] font-bold font-['Helvetica Neue'] leading-tight sm:leading-[52px] tracking-wide"
+          >
+            Rus tilini o‘rganish uchun <br />
+            ma’lumotlaringizni qoldiring
+          </div>
+          <div
+            class="w-full mx-auto bg-white rounded-[50px] p-4 sm:p-8 shadow-md mt-4 md:mt-10"
+          >
+            <form
+              class="space-y-6 px-2 md:px-[200px] xl:px-[305px] pt-2 md:pt-[60px] text-lg sm:text-xl"
+            >
+              <div>
+                <input
+                  type="text"
+                  placeholder="Ismingiz"
+                  class="w-full px-6 py-4 sm:py-6 bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-green-500"
+                />
+              </div>
+              <div>
+                <input
+                  type="tel"
+                  placeholder="+998 (99) 999 99 99"
+                  id="phone"
+                  class="w-full px-6 py-4 sm:py-6 bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-green-500"
+                />
+              </div>
+              <div class="text-center">
+                <button
+                  type="submit"
+                  class="py-4 px-20 border-2 whitespace-nowrap border-green-600 bg-[#39cc46] text-white text-lg font-semibold rounded-full shadow-lg transition duration-200"
+                >
+                  Kursga yozilish
+                </button>
+              </div>
+            </form>
+            <p class="text-center text-sm text-gray-500 mt-4">
+              Ma'lumotlaringiz qoldirish uchun, sizda
+              <span id="countdown" class="text-red-500">03:00</span> qoldi
             </p>
           </div>
         </div>
+      </section>
+    </div>
 
-        <div class="flex flex-col items-center lg:items-start mb-6 lg:mb-0">
-          <p class="text-gray-800 text-lg mb-2">Maxfiylik siyosati</p>
-          <p class="text-gray-800 text-lg mb-2">Litsenziya</p>
-          <div class="flex gap-6 mt-4">
-            <img
-              src="./images/instagram - icon.svg"
-              alt="Instagram"
-              class="w-8 h-8 cursor-pointer"
-            />
-            <img
-              src="./images/facebook - icon.svg"
-              alt="Facebook"
-              class="w-8 h-8 cursor-pointer"
-            />
-            <img
-              src="./images/youtube - icon.svg"
-              alt="YouTube"
-              class="w-8 h-8 cursor-pointer"
-            />
-            <img
-              src="./images/telegram - icon.svg"
-              alt="Telegram"
-              class="w-8 h-8 cursor-pointer"
-            />
+    <footer>
+      <div class="bg-white xl:px-[118px] lg:px-[38px] md:px-[30px] px-0">
+        <div class="container mx-auto pt-10 mt-10 pb-[30px]">
+          <div class="flex flex-col justify-center items-center">
+            <img src="./images/LOGOTYPE.svg" alt="Logo" class="w-36 mb-4" />
           </div>
-        </div>
+          <div class="flex flex-col md:flex-row justify-between">
+            <div class="flex flex-col items-center lg:items-start mb-6 lg:mb-0">
+              <div class="text-gray-800 text-center lg:text-left">
+                <p class="text-lg cursor-pointer mb-2">Ommaviy Oferta</p>
+                <p class="text-lg cursor-pointer mb-2">
+                  Shaxsiy ma'lumotlarni qayta ishlashga rozilik
+                </p>
+              </div>
+            </div>
 
-        <div class="flex flex-col items-center lg:flex-row lg:items-start">
-          <div
-            class="border-2 border-green-500 rounded-2xl p-4 flex items-center"
-          >
-            <img
-              src="./images/QR code (1).svg"
-              alt="QR Code"
-              class="w-36 h-36 hidden lg:flex"
-            />
-            <img
-              src="./images/play-store - icon.svg"
-              alt=""
-              class="flex w-[30px] h-[30px] lg:hidden"
-            />
-            <div class="ml-4">
-              <p class="text-lg font-bold text-gray-800 mb-2">Yuklab olish</p>
-              <p class="text-green-500 text-base">Play store</p>
+            <div class="flex flex-col items-center lg:items-start mb-6 lg:mb-0">
+              <p class="text-gray-800 text-lg cursor-pointer mb-2">
+                Maxfiylik siyosati
+              </p>
+              <p class="text-gray-800 text-lg cursor-pointer mb-2">
+                Litsenziya
+              </p>
+              <div class="flex gap-6 mt-4">
+                <img
+                  src="./images/instagram - icon.svg"
+                  alt="Instagram"
+                  class="w-8 h-8 cursor-pointer"
+                />
+                <img
+                  src="./images/facebook - icon.svg"
+                  alt="Facebook"
+                  class="w-8 h-8 cursor-pointer"
+                />
+                <img
+                  src="./images/youtube - icon.svg"
+                  alt="YouTube"
+                  class="w-8 h-8 cursor-pointer"
+                />
+                <img
+                  src="./images/telegram - icon.svg"
+                  alt="Telegram"
+                  class="w-8 h-8 cursor-pointer"
+                />
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center lg:flex-row lg:items-start">
+              <div
+                class="border-2 border-green-500 cursor-pointer rounded-2xl p-4 flex items-center"
+              >
+                <img
+                  src="./images/QR code (1).svg"
+                  alt="QR Code"
+                  class="w-36 h-36 hidden lg:flex"
+                />
+                <img
+                  src="./images/play-store - icon.svg"
+                  alt=""
+                  class="flex w-[30px] h-[30px] lg:hidden"
+                />
+                <div class="ml-4">
+                  <p class="text-lg font-bold text-gray-800 mb-2">
+                    Yuklab olish
+                  </p>
+                  <p class="text-green-500 text-base">Play store</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="bg-gray-100 py-4 mt-6">
+      <div
+        class="bg-gray-100 xl:px-[118px] lg:px-[38px] md:px-[30px] px-0 py-4"
+      >
         <div
-          class="container mx-auto lg:px-[120px] flex flex-col lg:flex-row lg:justify-between items-center"
+          class="container mx-auto flex flex-col lg:flex-row lg:justify-between items-center"
         >
           <p class="text-gray-500 text-center lg:text-left">
             Copyright © 2023 Prep.uz
@@ -1275,33 +1391,111 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
   <script>
     $(document).ready(function () {
-      $(".owl-carousel").owlCarousel({
-        loop: true,
-        center: true,
-        margin: 30,
+      const owl = $(".owl-carousel");
+      const totalItems = $(".owl-carousel .item").length;
+      let currentIndex = 1;
+
+      owl.owlCarousel({
         items: 1,
+        loop: true,
+        nav: false,
+        center: true,
         autoplay: true,
-        autoplayTimeout: 3000,
-        nav: true,
-        navText: [
-          '<svg width="15" height="15" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>',
-          '<svg width="15" height="15" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>'
-        ],
-        dots: true,
+        autoplayTimeout: 2000,
+        dots: false,
         responsive: {
           0: {
             items: 1,
-            margin: 20,
+            stagePadding: 10,
+          },
+          480: {
+            items: 1,
+            stagePadding: 60,
           },
           600: {
-            items: 2,
-            margin: 10,
+            items: 1,
+            stagePadding: 120,
           },
-          1064: {
-            items: 3,
-            margin: 10,
+          750: {
+            items: 1,
+            stagePadding: 80,
+          },
+          950: {
+            items: 2,
+            stagePadding: -150,
+          },
+          1024: {
+            items: 2,
+            stagePadding: -120,
+          },
+          1094: {
+            items: 2,
+            stagePadding: -60,
+          },
+          1200: {
+            items: 2,
+            stagePadding: -10,
+          },
+          1240: {
+            items: 2,
+            stagePadding: 30,
+          },
+          1290: {
+            items: 2,
+            stagePadding: 90,
+          },
+        },
+      });
+
+      function updatePagination() {
+        const progressBar = $("#progressBar");
+        const pageInfo = $("#pageInfo");
+
+        pageInfo.text(`${currentIndex}/${totalItems}`);
+
+        const percentageStep = 100 / totalItems;
+        const newPosition = (currentIndex - 1) * percentageStep;
+
+        progressBar.css("left", `${newPosition}%`);
+      }
+
+      updatePagination();
+
+      // Next/Prev buttons
+      $("#nextButton").click(function () {
+        owl.trigger("next.owl.carousel");
+        console.log("prev");
+      });
+
+      $("#prevButton").click(function () {
+        owl.trigger("prev.owl.carousel");
+      });
+
+      owl.on("changed.owl.carousel", function (event) {
+        currentIndex = (event.item.index + 1) % totalItems;
+        if (currentIndex === 0) currentIndex = totalItems;
+        updatePagination();
+      });
+    });
+
+    $(document).ready(function () {
+      const slider = $("#slider").owlCarousel({
+        center: true,
+        items: 2,
+        loop: false,
+        nav: false,
+
+        responsive: {
+          0: {
+            items: 2,
+            margin: -560,
+          },
+          1024: {
+            items: 4,
+            margin: -20,
           },
         },
       });
