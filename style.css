@@ -168,8 +168,31 @@ button {
 
 .Cell:hover .SlideText {
   transform: translateY(10);
-  transition: ease-in-out;
+  transition: cubic-bezier(0.68, -0.55, 0.265, 1.55);
   opacity: 1;
+}
+
+.Cell:hover .Icon {
+  margin-top: 30px;
+  background: #2aa234;
+  fill: white;
+  /* padding-top: 40px; */
+  /* margin-bottom: 20px; */
+}
+
+.Cell:hover .BlockText {
+  margin-top: -30px;
+  margin-bottom: 20px;
+}
+
+.Cell:hover .MainText {
+  margin-top: -30px;
+  margin-bottom: 20px;
+}
+
+.Cell:hover .LinkIcon {
+  margin-top: -30px;
+  margin-bottom: 20px;
 }
 
 .swiper-container {
