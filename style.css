@@ -433,6 +433,7 @@ button {
   transform: translateY(10);
   transition: 0.3s ease-in-out;
   opacity: 1;
+  color: #E3F8E4;
 }
 
 .Cell:hover .Icon {
@@ -450,6 +451,8 @@ button {
   padding-top: 50px;
   transition: 0.3s ease-in-out;
 }
+
+
 
 .Cell:hover .BlockText {
   margin-top: -30px;
