@@ -194,13 +194,13 @@ button {
 
 .owl-carousel .owl-item {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   padding: 0 15px;
 }
 
 .item {
-  width: 100%; 
-  max-width: 590px; 
+  width: 100%;
+  max-width: 590px;
 }
 
 .owl-stage {
@@ -227,5 +227,22 @@ button {
 }
 
 #slider .last-card {
-  margin-right: 0; 
+  margin-right: 0;
+}
+
+.owl-carousel2 .item {
+  background: #4dc7a0;
+  padding: 30px;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.carusell_main {
+  overflow: hidden;
+}
+.carusell {
+  width: calc(100% + 300px);
+  margin-left: -150px;
 }
