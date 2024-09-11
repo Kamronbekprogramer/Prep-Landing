@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <!-- <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OwlCarousel Center with Loop</title>
+    <title>Prep Landing</title>
+    <link rel="shortcut icon" type="image/png" href="./images/i (1).webp" />
+    <link rel="stylesheet" href="./style.css" /> -->
 
-    <!-- OwlCarousel CSS -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+
+    <!-- <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    /> -->
+  </head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Prep Landing</title>
+    <link rel="shortcut icon" type="image/png" href="./images/i (1).webp" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
@@ -19,14 +54,8 @@
       body {
         margin: 0;
       }
-      /* Customize the carousel styles */
       .owl-carousel .item {
-        background: #4dc7a0;
-        padding: 30px;
-        text-align: center;
-        color: white;
-        border-radius: 10px;
-        font-size: 18px;
+        padding: 0px 10px;
       }
 
       .carusell_main {
@@ -36,20 +65,367 @@
         width: calc(100% + 300px);
         margin-left: -150px;
       }
+
+      #progressBar {
+        height: 100%;
+        width: 30px !important;
+        background-color: #48bb78;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 9999px;
+      }
     </style>
   </head>
   <body>
+    <!-- course reviews carusel -->
     <section class="carusell_main">
       <div class="owl-carousel owl-theme carusell">
-        <div class="item"><h4>1</h4></div>
-        <div class="item"><h4>2</h4></div>
-        <div class="item"><h4>3</h4></div>
-        <div class="item"><h4>4</h4></div>
-        <div class="item"><h4>5</h4></div>
-        <div class="item"><h4>6</h4></div>
+        <div class="item">
+          <div
+            class="relative bg-white rounded-[35px] md:p-[40px] p-[30px] overflow-hidden"
+          >
+            <img
+              src="./images/bdgradient.png"
+              class="absolute top-0 left-0 w-full h-full object-cover"
+              alt=""
+            />
+
+            <div class="relative z-10">
+              <h3
+                class="text-[#202024] text-[20px] sm:text-[26px] font-medium mb-2"
+              >
+                Jamila Eshonqulova
+              </h3>
+              <p
+                class="text-[#202024]/50 text-sm sm:text-base font-medium mb-[40px]"
+              >
+                21.05.2024
+              </p>
+              <p class="text-[#202024]/50 text-xl font-medium">
+                O‘qishdan bo‘sh vaqtlarimda Prep.uz platformasidan Rus tilini
+                o‘rganvomman. 2 oy bo‘ldi uje natijasi zo‘r, barchaga tavsiya
+                qilaman.
+              </p>
+            </div>
+            <div class="absolute top-6 sm:top-8 right-6 sm:right-8">
+              <img src="./images/tire-icon.svg" alt="Quote Icon" />
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div
+            class="relative bg-white rounded-[35px] md:p-[40px] p-[30px] overflow-hidden"
+          >
+            <img
+              src="./images/bdgradient.png"
+              class="absolute top-0 left-0 w-full h-full object-cover"
+              alt=""
+            />
+
+            <div class="relative z-10">
+              <h3
+                class="text-[#202024] text-[20px] sm:text-[26px] font-medium mb-2"
+              >
+                Jamila Eshonqulova
+              </h3>
+              <p
+                class="text-[#202024]/50 text-sm sm:text-base font-medium mb-[40px]"
+              >
+                21.05.2024
+              </p>
+              <p class="text-[#202024]/50 text-xl font-medium">
+                O‘qishdan bo‘sh vaqtlarimda Prep.uz platformasidan Rus tilini
+                o‘rganvomman. 2 oy bo‘ldi uje natijasi zo‘r, barchaga tavsiya
+                qilaman.
+              </p>
+            </div>
+            <div class="absolute top-6 sm:top-8 right-6 sm:right-8">
+              <img src="./images/tire-icon.svg" alt="Quote Icon" />
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div
+            class="relative bg-white rounded-[35px] md:p-[40px] p-[30px] overflow-hidden"
+          >
+            <img
+              src="./images/bdgradient.png"
+              class="absolute top-0 left-0 w-full h-full object-cover"
+              alt=""
+            />
+
+            <div class="relative z-10">
+              <h3
+                class="text-[#202024] text-[20px] sm:text-[26px] font-medium mb-2"
+              >
+                Jamila Eshonqulova
+              </h3>
+              <p
+                class="text-[#202024]/50 text-sm sm:text-base font-medium mb-[40px]"
+              >
+                21.05.2024
+              </p>
+              <p class="text-[#202024]/50 text-xl font-medium">
+                O‘qishdan bo‘sh vaqtlarimda Prep.uz platformasidan Rus tilini
+                o‘rganvomman. 2 oy bo‘ldi uje natijasi zo‘r, barchaga tavsiya
+                qilaman.
+              </p>
+            </div>
+            <div class="absolute top-6 sm:top-8 right-6 sm:right-8">
+              <img src="./images/tire-icon.svg" alt="Quote Icon" />
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div
+            class="relative bg-white rounded-[35px] md:p-[40px] p-[30px] overflow-hidden"
+          >
+            <img
+              src="./images/bdgradient.png"
+              class="absolute top-0 left-0 w-full h-full object-cover"
+              alt=""
+            />
+
+            <div class="relative z-10">
+              <h3
+                class="text-[#202024] text-[20px] sm:text-[26px] font-medium mb-2"
+              >
+                Jamila Eshonqulova
+              </h3>
+              <p
+                class="text-[#202024]/50 text-sm sm:text-base font-medium mb-[40px]"
+              >
+                21.05.2024
+              </p>
+              <p class="text-[#202024]/50 text-xl font-medium">
+                O‘qishdan bo‘sh vaqtlarimda Prep.uz platformasidan Rus tilini
+                o‘rganvomman. 2 oy bo‘ldi uje natijasi zo‘r, barchaga tavsiya
+                qilaman.
+              </p>
+            </div>
+            <div class="absolute top-6 sm:top-8 right-6 sm:right-8">
+              <img src="./images/tire-icon.svg" alt="Quote Icon" />
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div
+            class="relative bg-white rounded-[35px] md:p-[40px] p-[30px] overflow-hidden"
+          >
+            <img
+              src="./images/bdgradient.png"
+              class="absolute top-0 left-0 w-full h-full object-cover"
+              alt=""
+            />
+
+            <div class="relative z-10">
+              <h3
+                class="text-[#202024] text-[20px] sm:text-[26px] font-medium mb-2"
+              >
+                Jamila Eshonqulova
+              </h3>
+              <p
+                class="text-[#202024]/50 text-sm sm:text-base font-medium mb-[40px]"
+              >
+                21.05.2024
+              </p>
+              <p class="text-[#202024]/50 text-xl font-medium">
+                O‘qishdan bo‘sh vaqtlarimda Prep.uz platformasidan Rus tilini
+                o‘rganvomman. 2 oy bo‘ldi uje natijasi zo‘r, barchaga tavsiya
+                qilaman.
+              </p>
+            </div>
+            <div class="absolute top-6 sm:top-8 right-6 sm:right-8">
+              <img src="./images/tire-icon.svg" alt="Quote Icon" />
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div
+            class="relative bg-white rounded-[35px] md:p-[40px] p-[30px] overflow-hidden"
+          >
+            <img
+              src="./images/bdgradient.png"
+              class="absolute top-0 left-0 w-full h-full object-cover"
+              alt=""
+            />
+
+            <div class="relative z-10">
+              <h3
+                class="text-[#202024] text-[20px] sm:text-[26px] font-medium mb-2"
+              >
+                Jamila Eshonqulova
+              </h3>
+              <p
+                class="text-[#202024]/50 text-sm sm:text-base font-medium mb-[40px]"
+              >
+                21.05.2024
+              </p>
+              <p class="text-[#202024]/50 text-xl font-medium">
+                O‘qishdan bo‘sh vaqtlarimda Prep.uz platformasidan Rus tilini
+                o‘rganvomman. 2 oy bo‘ldi uje natijasi zo‘r, barchaga tavsiya
+                qilaman.
+              </p>
+            </div>
+            <div class="absolute top-6 sm:top-8 right-6 sm:right-8">
+              <img src="./images/tire-icon.svg" alt="Quote Icon" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center mt-[40px] space-x-4">
+        <button
+          id="prevButton"
+          class="text-gray-400 hover:text-gray-600 focus:outline-none"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+        </button>
+
+        <div class="relative w-[184px] h-[18px] rounded-full px-2 bg-white">
+          <div
+            class="absolute left-[2px] !top-[2px] bg-green-500 rounded-full w-[10%] !h-[80%]"
+            id="progressBar"
+          ></div>
+          <span
+            class="absolute inset-0 flex items-center mt-[-45px] justify-center text-[#202024]/50 text-sm sm:text-base font-medium"
+          >
+            <span id="pageInfo">1/5</span>
+          </span>
+        </div>
+
+        <button
+          id="nextButton"
+          class="text-gray-600 hover:text-gray-800 focus:outline-none"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </button>
       </div>
     </section>
 
+    <!-- footer -->
+    <footer>
+      <div class="bg-white xl:px-[118px] lg:px-[38px] md:px-[30px] px-0">
+        <div class="container mx-auto pt-10 mt-10 pb-[30px]">
+          <div class="flex flex-col justify-center items-center">
+            <img src="./images/LOGOTYPE.svg" alt="Logo" class="w-36 mb-4" />
+          </div>
+          <div class="flex flex-col md:flex-row justify-between">
+            <div class="flex flex-col items-center lg:items-start mb-6 lg:mb-0">
+              <div class="text-gray-800 text-center lg:text-left">
+                <p class="text-lg cursor-pointer mb-2">Ommaviy Oferta</p>
+                <p class="text-lg cursor-pointer mb-2">
+                  Shaxsiy ma'lumotlarni qayta ishlashga rozilik
+                </p>
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center lg:items-start mb-6 lg:mb-0">
+              <p class="text-gray-800 text-lg cursor-pointer mb-2">
+                Maxfiylik siyosati
+              </p>
+              <p class="text-gray-800 text-lg cursor-pointer mb-2">
+                Litsenziya
+              </p>
+              <div class="flex gap-6 mt-4">
+                <img
+                  src="./images/instagram - icon.svg"
+                  alt="Instagram"
+                  class="w-8 h-8 cursor-pointer"
+                />
+                <img
+                  src="./images/facebook - icon.svg"
+                  alt="Facebook"
+                  class="w-8 h-8 cursor-pointer"
+                />
+                <img
+                  src="./images/youtube - icon.svg"
+                  alt="YouTube"
+                  class="w-8 h-8 cursor-pointer"
+                />
+                <img
+                  src="./images/telegram - icon.svg"
+                  alt="Telegram"
+                  class="w-8 h-8 cursor-pointer"
+                />
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center lg:flex-row lg:items-start">
+              <div
+                class="border-2 border-green-500 cursor-pointer rounded-2xl p-4 flex items-center"
+              >
+                <img
+                  src="./images/QR code (1).svg"
+                  alt="QR Code"
+                  class="w-36 h-36 hidden lg:flex"
+                />
+                <img
+                  src="./images/play-store - icon.svg"
+                  alt=""
+                  class="flex w-[30px] h-[30px] lg:hidden"
+                />
+                <div class="ml-4">
+                  <p class="text-lg font-bold text-gray-800 mb-2">
+                    Yuklab olish
+                  </p>
+                  <p class="text-green-500 text-base">Play store</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-gray-100 xl:px-[118px] lg:px-[38px] md:px-[30px] px-0 py-4"
+      >
+        <div
+          class="container mx-auto flex flex-col lg:flex-row lg:justify-between items-center"
+        >
+          <p class="text-gray-500 text-center lg:text-left">
+            Copyright © 2023 Prep.uz
+          </p>
+          <p
+            class="text-black text-center font-medium lg:text-right mt-4 lg:mt-0"
+          >
+            INN: 309828583
+          </p>
+          <p class="text-gray-500 text-center lg:text-right mt-4 lg:mt-0">
+            "MENTO EDTECH" MChJ
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.6/inputmask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
@@ -59,23 +435,59 @@
     <!-- OwlCarousel Initialization Script -->
     <script>
       $(document).ready(function () {
+        const owl = $(".owl-carousel");
+        const totalItems = $(".owl-carousel .item").length;
+        let currentIndex = 1;
         $(".owl-carousel").owlCarousel({
           loop: true, // Enable looping
           center: true, // Center the active item
           items: 3, // Number of items to display
           margin: 10, // Margin between items
           autoplay: true, // Auto play the carousel
-          autoplayTimeout: 3000, // Time between auto plays
-          nav: true, // Display navigation arrows
-          dots: true, // Display navigation dots
+          autoplayTimeout: 5000, // Time between auto plays
+          nav: false, // Display navigation arrows
+          dots: false, // Display navigation dots
           responsive: {
             0: {
-              items: 1, // Display 1 item on smaller screens
+              items: 2, // Display 1 item on smaller screens
             },
             600: {
+              items: 2, // Display 3 items on medium screens
+            },
+            1000: {
               items: 3, // Display 3 items on medium screens
             },
           },
+        });
+
+        function updatePagination() {
+          const progressBar = $("#progressBar");
+          const pageInfo = $("#pageInfo");
+
+          pageInfo.text(`${currentIndex}/${totalItems}`);
+
+          const percentageStep = 100 / totalItems;
+          const newPosition = (currentIndex - 1) * percentageStep;
+
+          progressBar.css("left", `${newPosition}%`);
+        }
+
+        updatePagination();
+
+        // Next/Prev buttons
+        $("#nextButton").click(function () {
+          owl.trigger("next.owl.carousel");
+          console.log("prev");
+        });
+
+        $("#prevButton").click(function () {
+          owl.trigger("prev.owl.carousel");
+        });
+
+        owl.on("changed.owl.carousel", function (event) {
+          currentIndex = (event.item.index + 1) % totalItems;
+          if (currentIndex === 0) currentIndex = totalItems;
+          updatePagination();
         });
       });
     </script>

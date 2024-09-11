@@ -68,8 +68,8 @@ html {
 }
 body {
   background: #f5f6f9 !important;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  /* overflow-y: scroll;
+  overflow-x: hidden; */
   font-weight: 400;
   font-size: 14px;
   margin: 0;
@@ -172,71 +172,23 @@ button {
   opacity: 1;
 }
 
-.swiper-container {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper {
-  height: 300px;
-}
-
 .inner-shadow {
   @apply shadow-inner;
   box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.owl-carousel .owl-item {
-  display: flex;
-  justify-content: center;
-  padding: 0 15px;
-}
-
-.item {
-  width: 100%;
-  max-width: 590px;
-}
-
-.owl-stage {
-  display: flex;
-  align-items: center;
-}
-.relative.w-15.h-6 {
-  position: relative;
-  overflow: hidden;
-}
-
 #progressBar {
-  height: 100%;
+  height: 80% !important;
   width: 30px !important;
   background-color: #48bb78;
   position: absolute;
-  top: 0;
+  top: 2px;
   left: 0;
   border-radius: 9999px;
 }
 
-.slider {
-  margin-left: -713px;
-}
-
-#slider .last-card {
-  margin-right: 0;
-}
-
 .owl-carousel2 .item {
-  background: #4dc7a0;
-  padding: 30px;
-  text-align: center;
-  color: white;
-  border-radius: 10px;
-  font-size: 18px;
+  padding: 0px 10px;
 }
 
 .carusell_main {
